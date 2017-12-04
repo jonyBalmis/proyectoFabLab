@@ -50,6 +50,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>industrial-robot.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -76,12 +79,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base de Datos\MaquinasGateway.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="Interfaz\VentanaPrincipal.Designer.vb">
+      <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Interfaz\VentanaPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,8 +102,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Interfaz\VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -123,7 +124,27 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\3d-printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple-users-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="industrial-robot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base de Datos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
