@@ -4,7 +4,7 @@ Public Class GatewayUsuario
     Private conexion As SqlConnection
     Private comando As SqlCommand
 
-    Public Sub New(ByRef conexion As String)
+    Public Sub New(conexion As String)
         Me.conexion = New SqlConnection(conexion)
         comando = New SqlCommand()
         comando.Connection = Me.conexion
@@ -18,7 +18,7 @@ Public Class GatewayUsuario
     ''' </summary>
     ''' <param name="dato">Cadena a comprobar.</param>
     ''' <param name="mensaje">Mensaje de error a mostrar cuando el dato está vacío o es nulo.</param>
-    Private Sub CampoVacio(ByVal dato As String, ByVal mensaje As String)
+    Private Sub CampoVacio(dato As String, mensaje As String)
         If dato.Trim().CompareTo("") = 0 Or dato Is Nothing Then
             Throw New ArgumentException(mensaje)
         End If
@@ -29,7 +29,7 @@ Public Class GatewayUsuario
     ''' Comprueba si el dato pasado como parámetro, es un número de teléfono de 9 dígitos.
     ''' </summary>
     ''' <param name="telefono">Número de teléfono.</param>
-    Private Sub ComprobarTelefono(ByVal telefono As String)
+    Private Sub ComprobarTelefono(telefono As String)
         Dim telefonoCorrecto As New Regex("[0-9]{9}")
         If Not telefonoCorrecto.IsMatch(telefono) Then
             Throw New ArgumentException("El teléfono debe contener 9 dígitos.")
@@ -41,7 +41,7 @@ Public Class GatewayUsuario
     ''' Comprueba si el dato pasado como parámetro, es un correo electrónico.
     ''' </summary>
     ''' <param name="correo">Correo elétronico.</param>
-    Private Sub ComprobarCorreo(ByVal correo As String)
+    Private Sub ComprobarCorreo(correo As String)
         Dim correoCorrecto As New Regex("^\w+@\w+.[a-z]{3}$")
         If Not correoCorrecto.IsMatch(correo) Then
             Throw New ArgumentException("Introduce un correo válido.")
@@ -54,7 +54,7 @@ Public Class GatewayUsuario
     ''' </summary>
     ''' <param name="telefono">Numero de teléfono.</param>
     ''' <param name="correo">Correo eléctronico.</param>
-    Private Sub ContactoObligatorio(ByVal telefono As String, ByVal correo As String)
+    Private Sub ContactoObligatorio(telefono As String, correo As String)
         If Not telefono.Trim().Equals("") And Not correo.Trim().Equals("") Then
             ComprobarTelefono(telefono)
             ComprobarCorreo(correo)
@@ -73,7 +73,7 @@ Public Class GatewayUsuario
     ''' </summary>
     ''' <param name="cadena">Dato a comprobar.</param>
     ''' <returns>Regresa true o false.</returns>
-    Private Function CampoEsNulo(ByVal cadena As String) As Boolean
+    Private Function CampoEsNulo(cadena As String) As Boolean
         If cadena.Trim().CompareTo("") = 0 Then
             Return True
         End If
@@ -278,7 +278,7 @@ Public Class GatewayUsuario
     ''' </summary>
     ''' <param name="nombre">Nombre del usuario.</param>
     ''' <returns>Regresa un objeto DataTable con los datos del usuario. </returns>
-    Public Function MostrarRegistroPorNombre(ByVal nombre As String) As DataTable
+    Public Function MostrarRegistroPorNombre(nombre As String) As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
@@ -305,7 +305,7 @@ Public Class GatewayUsuario
     ''' </summary>
     ''' <param name="id">Identificador del usuario</param>
     ''' <returns>Retorna un objeto datable con los datos del usuario.</returns>
-    Public Function MostrarRegistroPorId(ByVal id As Integer) As DataTable
+    Public Function MostrarRegistroPorId(id As Integer) As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
