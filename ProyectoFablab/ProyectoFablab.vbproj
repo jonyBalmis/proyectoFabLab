@@ -79,6 +79,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base de Datos\GatewayUsuario.vb" />
     <Compile Include="Interfaz\VentanaPrincipal.Designer.vb">
       <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </Compile>
@@ -142,9 +143,7 @@
   <ItemGroup>
     <Content Include="industrial-robot.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base de Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
