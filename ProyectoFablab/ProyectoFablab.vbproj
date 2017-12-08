@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
+    <Compile Include="Base de Datos\Modulos.vb" />
     <Compile Include="Interfaz\VentanaPrincipal.Designer.vb">
       <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </Compile>
