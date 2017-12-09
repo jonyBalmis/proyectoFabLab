@@ -53,7 +53,7 @@ Public Class GatewayUsuario
     'INSERTAR, ELIMINAR, ACTUALIZAR Y CONSULTAR
     '******************************************************************************
     ''' <summary>
-    ''' Inserta un registro en la base de datos.
+    ''' Registra un usuario.
     ''' </summary>
     ''' <param name="nombre">Nombre del usuario.</param>
     ''' <param name="apellidos">Apellidos del usuario.</param>
@@ -65,7 +65,7 @@ Public Class GatewayUsuario
     ''' <param name="tipo">Tipo de usuario.</param>
     ''' <param name="observaciones">Dato adicional del usuario.</param>
     ''' <returns>Regresa el número de filas afectadas.</returns>
-    Public Function InsertarUsuario(nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
+    Public Function Insertar(nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
         Dim filasAfectadas As Integer
         Dim consulta As String
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
@@ -111,11 +111,11 @@ Public Class GatewayUsuario
 
 
     ''' <summary>
-    ''' Elimina un registro de la base de datos.
+    ''' Elimina un registro del usuario mediante el identificador.
     ''' </summary>
     ''' <param name="id">Identificador del usuario.</param>
     ''' <returns>Regresa el número de filas afectadas</returns>
-    Public Function EliminarUsuario(id As Integer) As Integer
+    Public Function Eliminar(id As Integer) As Integer
         Dim consulta As String
         Dim filasAfectadas As Integer
         consulta = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
@@ -138,7 +138,7 @@ Public Class GatewayUsuario
 
 
     ''' <summary>
-    ''' Modifica los datos de un registro.
+    ''' Modifica los datos de un usuario mediante el identificador.
     ''' </summary>
     ''' <param name="id">Identificador del usuario.</param>
     ''' <param name="nombre">Nombre del usuario.</param>
@@ -151,7 +151,7 @@ Public Class GatewayUsuario
     ''' <param name="tipo">Tipo de usuario.</param>
     ''' ''' <param name="observaciones">Dato adicional del usuario.</param>
     ''' <returns>Devuelve el número de filas afectadas.</returns>
-    Public Function ActualizarUsuario(id As Integer, nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
+    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
         Dim consulta As String
         Dim filasAfectadas As Integer
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
@@ -193,10 +193,10 @@ Public Class GatewayUsuario
 
 
     ''' <summary>
-    ''' Selecciona todos los registros de la tabla.
+    ''' Selecciona todos los usuarios.
     ''' </summary>
     ''' <returns>Regresa todos los registros en un objeto dataTable.</returns>
-    Public Function MostrarRegistros() As DataTable
+    Public Function SeleccionarTodos() As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
@@ -217,10 +217,10 @@ Public Class GatewayUsuario
     End Function
 
     ''' <summary>
-    ''' Muestra el número total de registros.
+    ''' Cuenta el número total de usuarios.
     ''' </summary>
     ''' <returns>Devuelve el número de registros de la base de datos.</returns>
-    Public Function ContarUsuarios() As Integer
+    Public Function Contar() As Integer
         Dim consulta As String
         Dim resultado As Integer
         consulta = "SELECT COUNT(*) FROM Usuarios"
@@ -239,11 +239,11 @@ Public Class GatewayUsuario
     End Function
 
     ''' <summary>
-    ''' Muestra el registro de un usuario por nombre.
+    ''' Selecciona los usuarios con el mismo nombre pasado como parámetro.
     ''' </summary>
     ''' <param name="nombre">Nombre del usuario.</param>
     ''' <returns>Regresa un objeto DataTable con los datos del usuario. </returns>
-    Public Function MostrarRegistroPorNombre(nombre As String) As DataTable
+    Public Function SeleccionarNombre(nombre As String) As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
@@ -266,11 +266,11 @@ Public Class GatewayUsuario
 
 
     ''' <summary>
-    ''' Muestra el registro de un usuario por id.
+    ''' Selecciona un usuario mediante el identificador.
     ''' </summary>
     ''' <param name="id">Identificador del usuario</param>
     ''' <returns>Retorna un objeto datable con los datos del usuario.</returns>
-    Public Function MostrarRegistroPorId(id As Integer) As DataTable
+    Public Function SeleccionarId(id As Integer) As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader

@@ -79,6 +79,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base de Datos\GatewayReservas.vb" />
     <Compile Include="Base de Datos\GatewayTipoUsuario.vb" />
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
     <Compile Include="Base de Datos\Modulos.vb" />

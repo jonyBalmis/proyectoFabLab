@@ -4,15 +4,16 @@ Public Class GatewayTipoUsuario
     Private comando As SqlCommand
 
     Public Sub New(conexion As String)
+
         Me.conexion = New SqlConnection(conexion)
         comando = New SqlCommand()
         comando.Connection = Me.conexion
     End Sub
 
     ''' <summary>
-    ''' Método que inserta un registro en la base de datos.
+    ''' Inserta un nuevo tipo de usuario.
     ''' </summary>
-    ''' <param name="tipo">El tipo de usuario.</param>
+    ''' <param name="tipo">Tipo de usuario.</param>
     ''' <returns>Regresa el número de filas afectadas.</returns>
     Public Function Insertar(tipo As String) As Integer
 
@@ -40,7 +41,7 @@ Public Class GatewayTipoUsuario
     End Function
 
     ''' <summary>
-    ''' Modifica un registro de la base de datos.
+    ''' Modifica un registro del tipo de usuario a través del identificador.
     ''' </summary>
     ''' <param name="id">Identificador del usuario.</param>
     ''' <param name="tipo">El tipo de usuario para modificar.</param>
@@ -51,6 +52,7 @@ Public Class GatewayTipoUsuario
 
         DatoNoValido(id, 0, "El campo id no puede tener valor 0.")
         DatoNoValido(tipo.Trim(), "", "El campo tipo no puede estar vacío.")
+
         comando.Parameters.Add("@tipo", SqlDbType.VarChar)
         comando.Parameters("@tipo").Value = tipo
         consulta = "UPDATE TiposUsuario SET tipo=@tipo WHERE id=" & id
@@ -70,16 +72,18 @@ Public Class GatewayTipoUsuario
     End Function
 
     ''' <summary>
-    ''' Elimina un registro de la tabla
+    ''' Elimina un tipo de usuario mediante el identificador.
     ''' </summary>
-    ''' <param name="id"></param>
+    ''' <param name="id">Identificador</param>
     ''' <returns>Regresa el número de filas afectadas.</returns>
     Function Eliminar(id As Integer) As Integer
 
         Dim consulta As String
         Dim filasAfectadas As Integer
         DatoNoValido(id, 0, "El campo id no puede tener valor 0")
+
         consulta = "DELETE FROM tiposUsuario WHERE id=" & id
+
         Try
             conexion.Open()
             comando.CommandText = consulta
@@ -92,15 +96,17 @@ Public Class GatewayTipoUsuario
 
 
     ''' <summary>
-    ''' Muestra los tipos registrados en la base de datos.
+    ''' Selecciona todos los tipos de usuarios.
     ''' </summary>
     ''' <returns>Regresa un objeto de tipo DataTable con todos los registros.</returns>
-    Function MostrarTipos() As DataTable
+    Function Seleccionar() As DataTable
 
         Dim consulta As String
         Dim lectura As SqlDataReader
         Dim resultado As New DataTable
+
         consulta = "SELECT * FROM TiposUsuario"
+
         Try
             conexion.Open()
             comando.CommandText = consulta
