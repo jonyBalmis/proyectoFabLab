@@ -2,7 +2,7 @@
     Private contador As Integer
     Private aplicacion As VentanaPrincipal
     Private estrellas() As PictureBox
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
 
         If contador = 5 Then
             Me.Hide()

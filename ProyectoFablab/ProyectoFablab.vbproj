@@ -154,6 +154,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="industrial-robot.ico" />
+    <None Include="Resources\gestion.png" />
+    <None Include="Resources\add_user.png" />
     <None Include="Resources\StarBlueEyes.png" />
     <None Include="Resources\starBlue.png" />
     <None Include="Resources\Proyectologo.png" />

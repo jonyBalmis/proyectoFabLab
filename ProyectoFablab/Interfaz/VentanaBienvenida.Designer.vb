@@ -23,7 +23,7 @@ Partial Class VentanaBienvenida
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer = New System.Windows.Forms.Timer(Me.components)
         Me.EstrellaPictureBox3 = New System.Windows.Forms.PictureBox()
         Me.EstrellaPictureBox4 = New System.Windows.Forms.PictureBox()
         Me.EstrellaPictureBox5 = New System.Windows.Forms.PictureBox()
@@ -40,10 +40,10 @@ Partial Class VentanaBienvenida
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Timer1
+        'Timer
         '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 800
+        Me.Timer.Enabled = True
+        Me.Timer.Interval = 900
         '
         'EstrellaPictureBox3
         '
@@ -141,7 +141,7 @@ Partial Class VentanaBienvenida
 
     End Sub
 
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer As Timer
     Friend WithEvents EstrellaPictureBox3 As PictureBox
     Friend WithEvents EstrellaPictureBox4 As PictureBox
     Friend WithEvents EstrellaPictureBox5 As PictureBox
