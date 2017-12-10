@@ -83,6 +83,12 @@
     <Compile Include="Base de Datos\GatewayTipoUsuario.vb" />
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
     <Compile Include="Base de Datos\Modulos.vb" />
+    <Compile Include="Interfaz\VentanaBienvenida.Designer.vb">
+      <DependentUpon>VentanaBienvenida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VentanaBienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaz\VentanaPrincipal.Designer.vb">
       <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Interfaz\VentanaBienvenida.resx">
+      <DependentUpon>VentanaBienvenida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="industrial-robot.ico" />
+    <None Include="Resources\StarBlueEyes.png" />
+    <None Include="Resources\starBlue.png" />
+    <None Include="Resources\Proyectologo.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
