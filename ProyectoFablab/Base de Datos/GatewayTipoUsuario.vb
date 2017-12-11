@@ -99,7 +99,7 @@ Public Class GatewayTipoUsuario
     ''' Selecciona todos los tipos de usuarios.
     ''' </summary>
     ''' <returns>Regresa un objeto de tipo DataTable con todos los registros.</returns>
-    Function Seleccionar() As DataTable
+    Function SeleccionarTodos() As DataTable
 
         Dim consulta As String
         Dim lectura As SqlDataReader
@@ -118,5 +118,31 @@ Public Class GatewayTipoUsuario
             conexion.Close()
         End Try
         Return resultado
+    End Function
+
+    ''' <summary>
+    ''' Muestra el identificador del tipo de usuario.
+    ''' </summary>
+    ''' <param name="tipo">Tipo de usuario.</param>
+    ''' <returns>Identificador.</returns>
+    Public Function SeleccionarId(tipo As String) As Integer
+
+        Dim consulta As String
+        Dim id As Integer
+        consulta = String.Format("SELECT id FROM TiposUsuario WHERE tipo='{0}'", tipo)
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            id = DirectCast(comando.ExecuteScalar(), Integer)
+
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion Is Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return id
     End Function
 End Class

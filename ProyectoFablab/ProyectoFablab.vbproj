@@ -83,16 +83,10 @@
     <Compile Include="Base de Datos\GatewayTipoUsuario.vb" />
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
     <Compile Include="Base de Datos\Modulos.vb" />
-    <Compile Include="Interfaz\GestionMaquinas.Designer.vb">
-      <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    <Compile Include="Interfaz\NuevoUsuario.Designer.vb">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz\GestionMaquinas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaz\MaquinasEvento.Designer.vb">
-      <DependentUpon>MaquinasEvento.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\MaquinasEvento.vb">
+    <Compile Include="Interfaz\NuevoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaz\VentanaBienvenida.Designer.vb">
@@ -122,13 +116,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Negocio\Negocio.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Interfaz\GestionMaquinas.resx">
-      <DependentUpon>GestionMaquinas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz\MaquinasEvento.resx">
-      <DependentUpon>MaquinasEvento.vb</DependentUpon>
+    <EmbeddedResource Include="Interfaz\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\VentanaBienvenida.resx">
       <DependentUpon>VentanaBienvenida.vb</DependentUpon>
@@ -144,7 +136,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -173,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="industrial-robot.ico" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\gestion.png" />
     <None Include="Resources\add_user.png" />
     <None Include="Resources\StarBlueEyes.png" />

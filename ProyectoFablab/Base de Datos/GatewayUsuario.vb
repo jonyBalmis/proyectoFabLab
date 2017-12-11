@@ -70,36 +70,40 @@ Public Class GatewayUsuario
         Dim consulta As String
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
-        DatoNoValido(fechaNac.Trim(), "", "El campo fecha no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede tener valor 0.")
         ContactoObligatorio(telefono, email)
-        comando.Parameters.Add("@nombre", SqlDbType.VarChar)
-        comando.Parameters("@nombre").Value = nombre
-        comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
-        comando.Parameters("@apellidos").Value = apellidos
-        comando.Parameters.Add("@fechaNac", SqlDbType.Date)
-        comando.Parameters("@fechaNac").Value = DateTime.Parse(fechaNac)
-        comando.Parameters.Add("@telefono", SqlDbType.VarChar)
-        comando.Parameters("@telefono").Value = IIf(telefono.Trim().CompareTo("") = 0, DBNull.Value, telefono)
-        comando.Parameters.Add("@correo", SqlDbType.VarChar)
-        comando.Parameters("@correo").Value = IIf(email.Trim().CompareTo("") = 0, DBNull.Value, email)
-        comando.Parameters.Add("@direccion", SqlDbType.VarChar)
-        comando.Parameters("@direccion").Value = IIf(direccion.Trim().CompareTo("") = 0, DBNull.Value, direccion)
-        comando.Parameters.Add("@organizacion", SqlDbType.VarChar)
-        comando.Parameters("@organizacion").Value = IIf(organizacion.Trim().CompareTo("") = 0, DBNull.Value, organizacion)
-        comando.Parameters.Add("@tipo", SqlDbType.Int)
-        comando.Parameters("@tipo").Value = tipo
-        comando.Parameters.Add("@fechaAlta", SqlDbType.Date)
-        comando.Parameters("@fechaAlta").Value = DateTime.Today
-        comando.Parameters.Add("@observaciones", SqlDbType.Text)
-        comando.Parameters("@observaciones").Value = IIf(observaciones.Trim().CompareTo("") = 0, DBNull.Value, observaciones)
-        consulta = "INSERT INTO Usuarios ( nombre, apellidos, fecha_nacimiento, telefono, email, direccion, organizacion, tipo, fecha_alta, observaciones) VALUES (@nombre,@apellidos,@fechaNac,@telefono,@correo,@direccion,@organizacion,@tipo,@fechaAlta,@observaciones)"
+        If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+            Throw New ArgumentException("El campo fecha no puede estar vacío")
+        End If
         Try
+            comando.Parameters.Add("@nombre", SqlDbType.VarChar)
+            comando.Parameters("@nombre").Value = nombre
+            comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
+            comando.Parameters("@apellidos").Value = apellidos
+            comando.Parameters.Add("@fechaNac", SqlDbType.Date)
+            comando.Parameters("@fechaNac").Value = DateTime.Parse(fechaNac)
+            comando.Parameters.Add("@telefono", SqlDbType.VarChar)
+            comando.Parameters("@telefono").Value = IIf(telefono.Trim().CompareTo("") = 0, DBNull.Value, telefono)
+            comando.Parameters.Add("@correo", SqlDbType.VarChar)
+            comando.Parameters("@correo").Value = IIf(email.Trim().CompareTo("") = 0, DBNull.Value, email)
+            comando.Parameters.Add("@direccion", SqlDbType.VarChar)
+            comando.Parameters("@direccion").Value = IIf(direccion.Trim().CompareTo("") = 0, DBNull.Value, direccion)
+            comando.Parameters.Add("@organizacion", SqlDbType.VarChar)
+            comando.Parameters("@organizacion").Value = IIf(organizacion.Trim().CompareTo("") = 0, DBNull.Value, organizacion)
+            comando.Parameters.Add("@tipo", SqlDbType.Int)
+            comando.Parameters("@tipo").Value = tipo
+            comando.Parameters.Add("@fechaAlta", SqlDbType.Date)
+            comando.Parameters("@fechaAlta").Value = DateTime.Today
+            comando.Parameters.Add("@observaciones", SqlDbType.Text)
+            comando.Parameters("@observaciones").Value = IIf(observaciones.Trim().CompareTo("") = 0, DBNull.Value, observaciones)
+            consulta = "INSERT INTO Usuarios ( nombre, apellidos, fecha_nacimiento, telefono, email, direccion, organizacion, tipo, fecha_alta, observaciones) VALUES (@nombre,@apellidos,@fechaNac,@telefono,@correo,@direccion,@organizacion,@tipo,@fechaAlta,@observaciones)"
+
             conexion.Open()
             comando.CommandText = consulta
             filasAfectadas = comando.ExecuteNonQuery
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
+
         Finally
             If conexion IsNot Nothing Then
                 comando.Parameters.Clear()
@@ -156,9 +160,11 @@ Public Class GatewayUsuario
         Dim filasAfectadas As Integer
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
-        DatoNoValido(fechaNac.Trim(), "", "El campo fecha no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede no puede tener valor 0.")
         ContactoObligatorio(telefono, email)
+        If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+            Throw New ArgumentException("El campo fecha no puede estar vacío")
+        End If
         comando.Parameters.Add("@nombre", SqlDbType.VarChar)
         comando.Parameters("@nombre").Value = nombre
         comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
