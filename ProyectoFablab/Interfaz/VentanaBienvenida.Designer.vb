@@ -48,9 +48,10 @@ Partial Class VentanaBienvenida
         'EstrellaPictureBox3
         '
         Me.EstrellaPictureBox3.Image = Global.ProyectoFablab.My.Resources.Resources.starBlue
-        Me.EstrellaPictureBox3.Location = New System.Drawing.Point(88, 3)
+        Me.EstrellaPictureBox3.Location = New System.Drawing.Point(117, 4)
+        Me.EstrellaPictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EstrellaPictureBox3.Name = "EstrellaPictureBox3"
-        Me.EstrellaPictureBox3.Size = New System.Drawing.Size(30, 24)
+        Me.EstrellaPictureBox3.Size = New System.Drawing.Size(40, 30)
         Me.EstrellaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.EstrellaPictureBox3.TabIndex = 16
         Me.EstrellaPictureBox3.TabStop = False
@@ -58,9 +59,10 @@ Partial Class VentanaBienvenida
         'EstrellaPictureBox4
         '
         Me.EstrellaPictureBox4.Image = Global.ProyectoFablab.My.Resources.Resources.starBlue
-        Me.EstrellaPictureBox4.Location = New System.Drawing.Point(124, 3)
+        Me.EstrellaPictureBox4.Location = New System.Drawing.Point(165, 4)
+        Me.EstrellaPictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EstrellaPictureBox4.Name = "EstrellaPictureBox4"
-        Me.EstrellaPictureBox4.Size = New System.Drawing.Size(30, 24)
+        Me.EstrellaPictureBox4.Size = New System.Drawing.Size(40, 30)
         Me.EstrellaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.EstrellaPictureBox4.TabIndex = 15
         Me.EstrellaPictureBox4.TabStop = False
@@ -68,9 +70,10 @@ Partial Class VentanaBienvenida
         'EstrellaPictureBox5
         '
         Me.EstrellaPictureBox5.Image = Global.ProyectoFablab.My.Resources.Resources.starBlue
-        Me.EstrellaPictureBox5.Location = New System.Drawing.Point(160, 3)
+        Me.EstrellaPictureBox5.Location = New System.Drawing.Point(213, 4)
+        Me.EstrellaPictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EstrellaPictureBox5.Name = "EstrellaPictureBox5"
-        Me.EstrellaPictureBox5.Size = New System.Drawing.Size(30, 24)
+        Me.EstrellaPictureBox5.Size = New System.Drawing.Size(40, 30)
         Me.EstrellaPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.EstrellaPictureBox5.TabIndex = 14
         Me.EstrellaPictureBox5.TabStop = False
@@ -78,9 +81,10 @@ Partial Class VentanaBienvenida
         'EstrellaPictureBox2
         '
         Me.EstrellaPictureBox2.Image = Global.ProyectoFablab.My.Resources.Resources.starBlue
-        Me.EstrellaPictureBox2.Location = New System.Drawing.Point(52, 3)
+        Me.EstrellaPictureBox2.Location = New System.Drawing.Point(69, 4)
+        Me.EstrellaPictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EstrellaPictureBox2.Name = "EstrellaPictureBox2"
-        Me.EstrellaPictureBox2.Size = New System.Drawing.Size(30, 24)
+        Me.EstrellaPictureBox2.Size = New System.Drawing.Size(40, 30)
         Me.EstrellaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.EstrellaPictureBox2.TabIndex = 13
         Me.EstrellaPictureBox2.TabStop = False
@@ -88,9 +92,10 @@ Partial Class VentanaBienvenida
         'EstrellaPictureBox1
         '
         Me.EstrellaPictureBox1.Image = Global.ProyectoFablab.My.Resources.Resources.starBlue
-        Me.EstrellaPictureBox1.Location = New System.Drawing.Point(16, 3)
+        Me.EstrellaPictureBox1.Location = New System.Drawing.Point(21, 4)
+        Me.EstrellaPictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EstrellaPictureBox1.Name = "EstrellaPictureBox1"
-        Me.EstrellaPictureBox1.Size = New System.Drawing.Size(30, 24)
+        Me.EstrellaPictureBox1.Size = New System.Drawing.Size(40, 30)
         Me.EstrellaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.EstrellaPictureBox1.TabIndex = 12
         Me.EstrellaPictureBox1.TabStop = False
@@ -100,8 +105,9 @@ Partial Class VentanaBienvenida
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.ProyectoFablab.My.Resources.Resources.Proyectologo
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(406, 233)
+        Me.PictureBox1.Size = New System.Drawing.Size(541, 287)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
@@ -113,20 +119,22 @@ Partial Class VentanaBienvenida
         Me.Panel1.Controls.Add(Me.EstrellaPictureBox3)
         Me.Panel1.Controls.Add(Me.EstrellaPictureBox5)
         Me.Panel1.Controls.Add(Me.EstrellaPictureBox4)
-        Me.Panel1.Location = New System.Drawing.Point(91, 175)
+        Me.Panel1.Location = New System.Drawing.Point(121, 215)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 32)
+        Me.Panel1.Size = New System.Drawing.Size(267, 39)
         Me.Panel1.TabIndex = 22
         '
         'VentanaBienvenida
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(406, 233)
+        Me.ClientSize = New System.Drawing.Size(541, 287)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "VentanaBienvenida"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VentanaBienvenida"

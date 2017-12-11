@@ -54,7 +54,7 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(867, 480)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(889, 473)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Panel1
@@ -65,7 +65,7 @@ Partial Class GestionMaquinas
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(861, 66)
+        Me.Panel1.Size = New System.Drawing.Size(883, 64)
         Me.Panel1.TabIndex = 0
         '
         'Button5
@@ -87,7 +87,8 @@ Partial Class GestionMaquinas
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(716, 17)
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Location = New System.Drawing.Point(713, 17)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(119, 32)
         Me.Button4.TabIndex = 0
@@ -98,9 +99,9 @@ Partial Class GestionMaquinas
         '
         Me.Panel2.Controls.Add(Me.DataGridView1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(3, 75)
+        Me.Panel2.Location = New System.Drawing.Point(3, 73)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(861, 330)
+        Me.Panel2.Size = New System.Drawing.Size(883, 325)
         Me.Panel2.TabIndex = 1
         '
         'DataGridView1
@@ -110,7 +111,7 @@ Partial Class GestionMaquinas
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(861, 330)
+        Me.DataGridView1.Size = New System.Drawing.Size(883, 325)
         Me.DataGridView1.TabIndex = 0
         '
         'Panel3
@@ -119,9 +120,9 @@ Partial Class GestionMaquinas
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(3, 411)
+        Me.Panel3.Location = New System.Drawing.Point(3, 404)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(861, 66)
+        Me.Panel3.Size = New System.Drawing.Size(883, 66)
         Me.Panel3.TabIndex = 2
         '
         'Button3
@@ -151,14 +152,14 @@ Partial Class GestionMaquinas
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Form2
+        'GestionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(867, 480)
+        Me.ClientSize = New System.Drawing.Size(889, 473)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Name = "GestionMaquinas"
+        Me.Text = "FabLab-Gestion de Maquinas"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

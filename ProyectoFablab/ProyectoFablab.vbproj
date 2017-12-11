@@ -82,6 +82,12 @@
     <Compile Include="Base de Datos\GatewayReservas.vb" />
     <Compile Include="Base de Datos\GatewayTipoUsuario.vb" />
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
+    <Compile Include="Interfaz\AcercaDe.Designer.vb">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\AcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaz\GestionMaquinas.designer.vb">
       <DependentUpon>GestionMaquinas.vb</DependentUpon>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="Negocio\Negocio.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Interfaz\AcercaDe.resx">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\GestionMaquinas.resx">
       <DependentUpon>GestionMaquinas.vb</DependentUpon>
     </EmbeddedResource>
