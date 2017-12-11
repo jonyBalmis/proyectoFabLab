@@ -72,7 +72,7 @@ Public Class GatewayUsuario
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede tener valor 0.")
         ContactoObligatorio(telefono, email)
-        If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+        If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
             Throw New ArgumentException("El campo fecha no puede estar vacío")
         End If
         Try
@@ -162,7 +162,7 @@ Public Class GatewayUsuario
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede no puede tener valor 0.")
         ContactoObligatorio(telefono, email)
-        If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+        If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
             Throw New ArgumentException("El campo fecha no puede estar vacío")
         End If
         comando.Parameters.Add("@nombre", SqlDbType.VarChar)
