@@ -22,7 +22,7 @@ Public Class GatewayReservas
         Dim consulta As String
         Dim filasAfectadas As Integer
 
-        DatoNoValido(fecha.Trim(), "", "El campo fecha no puede estar vacío.")
+        'DatoNoValido(fecha.Trim(), "", "El campo fecha no puede estar vacío.")
         DatoNoValido(hora.Trim(), "", "El campo hora no puede estar vacío.")
         DatoNoValido(usuario, 0, "El campo fecha no puede tener valor 0.")
 
@@ -67,7 +67,7 @@ Public Class GatewayReservas
         Dim filasAfectadas As Integer
 
         DatoNoValido(id, 0, "El campo id no puede tener valor 0.")
-        DatoNoValido(fecha.Trim(), "", "El campo fecha no puede estar vacío.")
+        ' DatoNoValido(fecha.Trim(), "", "El campo fecha no puede estar vacío.")
         DatoNoValido(hora.Trim(), "", "El campo hora no puede estar vacío.")
         DatoNoValido(usuario, 0, "El campo fecha no puede tener valor 0.")
 

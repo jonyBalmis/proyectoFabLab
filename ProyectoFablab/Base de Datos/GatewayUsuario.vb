@@ -11,45 +11,6 @@ Public Class GatewayUsuario
     End Sub
 
     '******************************************************************************
-    'FUNCIONES Y PROCEDIMIENTOS PRIVADOS
-    '******************************************************************************
-
-    ''' <summary>
-    ''' Procedimiento que obliga a introducir un número de teléfono, un correo o una de las dos formas de contacto.
-    ''' </summary>
-    ''' <param name="telefono">Numero de teléfono.</param>
-    ''' <param name="correo">Correo eléctronico.</param>
-    Private Sub ContactoObligatorio(ByVal telefono As String, ByVal correo As String)
-        Dim mensajeFono As String = "El teléfono debe contener 9 dígitos."
-        Dim mensajeCorreo As String = "Introduce un correo válido."
-        Dim patronFono As String = "[0-9]{9}"
-        Dim patronCorreo As String = "^\w+@\w+.[a-z]{3}$"
-        If Not telefono.Trim().Equals("") And Not correo.Trim().Equals("") Then
-            If Not ValidaCadena(telefono, patronFono) Then
-                Throw New ArgumentException(mensajeFono)
-            End If
-            If Not ValidaCadena(correo, patronCorreo) Then
-                Throw New ArgumentException(mensajeCorreo)
-            End If
-        ElseIf Not telefono.Trim().Equals("") Then
-            If Not ValidaCadena(telefono, patronFono) Then
-                Throw New ArgumentException(mensajeFono)
-            End If
-        ElseIf Not correo.Trim().Equals("") Then
-            If Not ValidaCadena(correo, patronCorreo) Then
-                Throw New ArgumentException(mensajeCorreo)
-            End If
-        Else
-            Throw New ArgumentException("No hay ningún dato de contacto.")
-        End If
-    End Sub
-
-
-    '******************************************************************************
-    '******************************************************************************
-
-
-    '******************************************************************************
     'INSERTAR, ELIMINAR, ACTUALIZAR Y CONSULTAR
     '******************************************************************************
     ''' <summary>
@@ -65,23 +26,24 @@ Public Class GatewayUsuario
     ''' <param name="tipo">Tipo de usuario.</param>
     ''' <param name="observaciones">Dato adicional del usuario.</param>
     ''' <returns>Regresa el número de filas afectadas.</returns>
-    Public Function Insertar(nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
+    Public Function Insertar(nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
         Dim filasAfectadas As Integer
         Dim consulta As String
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede tener valor 0.")
-        ContactoObligatorio(telefono, email)
-        If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
-            Throw New ArgumentException("El campo fecha no puede estar vacío")
-        End If
+
+        ' If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+        ' Throw New ArgumentException("El campo fecha no puede estar vacío")
+        'End If
+
         Try
             comando.Parameters.Add("@nombre", SqlDbType.VarChar)
             comando.Parameters("@nombre").Value = nombre
             comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
             comando.Parameters("@apellidos").Value = apellidos
             comando.Parameters.Add("@fechaNac", SqlDbType.Date)
-            comando.Parameters("@fechaNac").Value = DateTime.Parse(fechaNac)
+            comando.Parameters("@fechaNac").Value = fechaNac
             comando.Parameters.Add("@telefono", SqlDbType.VarChar)
             comando.Parameters("@telefono").Value = IIf(telefono.Trim().CompareTo("") = 0, DBNull.Value, telefono)
             comando.Parameters.Add("@correo", SqlDbType.VarChar)
@@ -161,10 +123,9 @@ Public Class GatewayUsuario
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede no puede tener valor 0.")
-        ContactoObligatorio(telefono, email)
-        If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
-            Throw New ArgumentException("El campo fecha no puede estar vacío")
-        End If
+        '  If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
+        ' Throw New ArgumentException("El campo fecha no puede estar vacío")
+        'End If
         comando.Parameters.Add("@nombre", SqlDbType.VarChar)
         comando.Parameters("@nombre").Value = nombre
         comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
