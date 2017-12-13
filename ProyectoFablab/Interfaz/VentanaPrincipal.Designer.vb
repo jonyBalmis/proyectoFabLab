@@ -26,7 +26,7 @@ Partial Class VentanaPrincipal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestiónDeUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionDeUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaMáquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestiónDeMáquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,8 +39,8 @@ Partial Class VentanaPrincipal
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.UsuarioIcoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.GestionIcoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
@@ -64,7 +64,7 @@ Partial Class VentanaPrincipal
         '
         'UsuariosToolStripMenuItem
         '
-        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestiónDeUsuariosToolStripMenuItem})
+        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestionDeUsuariosToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.UsuariosToolStripMenuItem.Text = "&Usuarios"
@@ -75,11 +75,11 @@ Partial Class VentanaPrincipal
         Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.NuevoUsuarioToolStripMenuItem.Text = "Nuevo u&suario"
         '
-        'GestiónDeUsuariosToolStripMenuItem
+        'GestionDeUsuariosToolStripMenuItem
         '
-        Me.GestiónDeUsuariosToolStripMenuItem.Name = "GestiónDeUsuariosToolStripMenuItem"
-        Me.GestiónDeUsuariosToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.GestiónDeUsuariosToolStripMenuItem.Text = "Gestión de usuarios"
+        Me.GestionDeUsuariosToolStripMenuItem.Name = "GestionDeUsuariosToolStripMenuItem"
+        Me.GestionDeUsuariosToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.GestionDeUsuariosToolStripMenuItem.Text = "Gestión de usuarios"
         '
         'MaquinasToolStripMenuItem
         '
@@ -153,30 +153,30 @@ Partial Class VentanaPrincipal
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripButton5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioIcoToolStripButton, Me.GestionIcoToolStripButton, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripButton5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(511, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'UsuarioIcoToolStripButton
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "Nuevo Usuario"
+        Me.UsuarioIcoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.UsuarioIcoToolStripButton.Image = CType(resources.GetObject("UsuarioIcoToolStripButton.Image"), System.Drawing.Image)
+        Me.UsuarioIcoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.UsuarioIcoToolStripButton.Name = "UsuarioIcoToolStripButton"
+        Me.UsuarioIcoToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.UsuarioIcoToolStripButton.Text = "Nuevo Usuario"
         '
-        'ToolStripButton2
+        'GestionIcoToolStripButton
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "Gestión de Usuario"
+        Me.GestionIcoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GestionIcoToolStripButton.Image = CType(resources.GetObject("GestionIcoToolStripButton.Image"), System.Drawing.Image)
+        Me.GestionIcoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GestionIcoToolStripButton.Name = "GestionIcoToolStripButton"
+        Me.GestionIcoToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.GestionIcoToolStripButton.Text = "Gestión de Usuario"
         '
         'ToolStripSeparator2
         '
@@ -265,12 +265,12 @@ Partial Class VentanaPrincipal
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUsuarioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GestiónDeUsuariosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestionDeUsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevaMáquinaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestiónDeMáquinasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents UsuarioIcoToolStripButton As ToolStripButton
+    Friend WithEvents GestionIcoToolStripButton As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents StatusStrip1 As StatusStrip

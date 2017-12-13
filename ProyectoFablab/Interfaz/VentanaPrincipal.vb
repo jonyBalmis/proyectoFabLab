@@ -1,4 +1,5 @@
 ﻿Class VentanaPrincipal
+
     Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click
         Dim nuevo As NuevoUsuario = New NuevoUsuario()
         nuevo.Show()
@@ -8,9 +9,18 @@
         VentanaBienvenida.Close()
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        NuevoUsuarioToolStripMenuItem.PerformClick()
+
+
+    Private Sub GestionDeUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeUsuariosToolStripMenuItem.Click
+        Dim gestion As GestionUsuarios = New GestionUsuarios()
+        gestion.Show()
     End Sub
 
+    Private Sub GestionIcoToolStripButton_Click(sender As Object, e As EventArgs) Handles GestionIcoToolStripButton.Click
+        GestionDeUsuariosToolStripMenuItem.PerformClick()
+    End Sub
 
+    Private Sub UsuarioIcoToolStripButton_Click(sender As Object, e As EventArgs) Handles UsuarioIcoToolStripButton.Click
+        NuevoUsuarioToolStripMenuItem.PerformClick()
+    End Sub
 End Class

@@ -94,6 +94,12 @@
     <Compile Include="Interfaz\GestionMaquinas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interfaz\GestionUsuarios.Designer.vb">
+      <DependentUpon>GestionUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\GestionUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaz\MaquinasEvento.Designer.vb">
       <DependentUpon>MaquinasEvento.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\GestionMaquinas.resx">
       <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\MaquinasEvento.resx">
       <DependentUpon>MaquinasEvento.vb</DependentUpon>
