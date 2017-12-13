@@ -4,8 +4,7 @@ Public Class NuevoUsuario
 
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        NUTipoComboBox.DisplayMember = "tipo"
-        NUTipoComboBox.DataSource = TipoUsuario.SeleccionarTipos()
+        ActualizarComboBox()
     End Sub
 
     Private Sub NUAceptarButton_Click(sender As Object, e As EventArgs) Handles NUAceptarButton.Click
@@ -25,7 +24,8 @@ Public Class NuevoUsuario
     End Sub
 
     Private Sub NUTipoButton_Click(sender As Object, e As EventArgs) Handles NUTipoButton.Click
-        MessageBox.Show("Confirmado", "Nuevo usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Dim nuevoTipo As NuevoTipoUsuario = New NuevoTipoUsuario()
+        nuevoTipo.Show()
 
     End Sub
 
@@ -64,4 +64,8 @@ Public Class NuevoUsuario
 
     End Sub
 
+    Public  Sub ActualizarComboBox()
+        NUTipoComboBox.DisplayMember = "tipo"
+        NUTipoComboBox.DataSource = TipoUsuario.SeleccionarTipos()
+    End Sub
 End Class
