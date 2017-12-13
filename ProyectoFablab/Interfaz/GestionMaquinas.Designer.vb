@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class GestionMaquinas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class GestionMaquinas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -59,7 +58,6 @@ Partial Class GestionMaquinas
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -67,15 +65,6 @@ Partial Class GestionMaquinas
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(883, 64)
         Me.Panel1.TabIndex = 0
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(331, 22)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Buscar"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -180,5 +169,4 @@ Partial Class GestionMaquinas
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
 End Class
