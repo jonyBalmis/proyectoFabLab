@@ -1,13 +1,17 @@
-﻿Public Class NuevoUsuario
+﻿Imports Microsoft.ProjectOxford.Vision
+Imports System.IO
+Public Class NuevoUsuario
+
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NUTipoComboBox.DisplayMember = "tipo"
-        NUTipoComboBox.DataSource = Negocio.TiposUsuarios()
+        NUTipoComboBox.DataSource = TipoUsuario.SeleccionarTipos()
     End Sub
 
     Private Sub NUAceptarButton_Click(sender As Object, e As EventArgs) Handles NUAceptarButton.Click
         Try
-            Negocio.InsertarUsuario(NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
+            Usuario.Insertar(NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
+            GuardarImagen(Usuario.ObtenerUltimoId())
             MessageBox.Show(NUNombreTextBox.Text & " ha sido registrado.", "Usuario registrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Dispose()
         Catch ex As ArgumentException
@@ -37,6 +41,27 @@
     End Sub
 
     Private Sub NUExaminarButton_Click(sender As Object, e As EventArgs) Handles NUExaminarButton.Click
+        Dim seleccionarImagen As New OpenFileDialog()
+        Dim rutaImagen As String
+        seleccionarImagen.Filter = "Imágenes (*.jpg)|*.jpg |Imágenes(*.png)|*.png|Todas las imágenes(*.*)|*.*"
+
+        If seleccionarImagen.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            rutaImagen = seleccionarImagen.FileName
+            Me.NUFotoPictureBox.Image = Image.FromFile(rutaImagen)
+            Me.NUFotoPictureBox.ImageLocation = rutaImagen
+            Me.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+        End If
+    End Sub
+
+
+    Private Async Sub GuardarImagen(identificador As Integer)
+        Dim thumbnail As Byte()
+        Dim nombreImagen As String
+
+        thumbnail = Await ConseguirThumbnail(NUFotoPictureBox.ImageLocation)
+        nombreImagen = identificador & Path.GetExtension(NUFotoPictureBox.ImageLocation)
+        File.WriteAllBytes(My.Settings.usuariosImg & nombreImagen, thumbnail)
 
     End Sub
+
 End Class

@@ -151,6 +151,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Negocio\Negocio.vb" />
+    <Compile Include="Negocio\Reservas.vb" />
+    <Compile Include="Negocio\TipoUsuario.vb" />
+    <Compile Include="Negocio\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Interfaz\AcercaDe.resx">
@@ -218,7 +221,10 @@
     <None Include="Resources\starBlue.png" />
     <None Include="Resources\Proyectologo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Imagenes\Maquinas\" />
+    <Folder Include="Imagenes\Usuarios\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

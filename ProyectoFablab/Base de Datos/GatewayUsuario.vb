@@ -215,7 +215,7 @@ Public Class GatewayUsuario
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
-        consulta = String.Format("SELECT * FROM usuarios WHERE nombre='{0}'", nombre)
+        consulta = String.Format("SELECT * FROM usuarios WHERE nombre='{0}' AND apellido={}", nombre)
         Try
             conexion.Open()
             comando.CommandText = consulta

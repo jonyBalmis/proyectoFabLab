@@ -243,6 +243,7 @@ Partial Class VentanaPrincipal
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "VentanaPrincipal"
         Me.Text = "FabLab Balmis-Ventana Principal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)

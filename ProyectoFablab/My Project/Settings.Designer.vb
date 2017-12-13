@@ -92,13 +92,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("..\..\Resources\")>  _
-        Public Property Ruta() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("..\..\Imagenes\Usuarios\")>  _
+        Public Property usuariosImg() As String
             Get
-                Return CType(Me("Ruta"),String)
+                Return CType(Me("usuariosImg"),String)
             End Get
             Set
-                Me("Ruta") = value
+                Me("usuariosImg") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("..\..\Imagenes\Maquinas\")>  _
+        Public Property maquinasImg() As String
+            Get
+                Return CType(Me("maquinasImg"),String)
+            End Get
+            Set
+                Me("maquinasImg") = value
             End Set
         End Property
     End Class
