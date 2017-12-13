@@ -53,4 +53,9 @@
         Dim ultimaFila As DataRow = gatewayUsuario.SeleccionarTodos().Rows.Item(total - 1)
         Return DirectCast(ultimaFila.Item(0), Integer)
     End Function
+
+    Public Function SeleccionarUsuarios() As DataTable
+        Dim usuarios As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+        Return usuarios.SeleccionarCamposTabla()
+    End Function
 End Module
