@@ -1,4 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
+Imports Microsoft.ProjectOxford.Vision
+Imports System.IO
 Module Modulo
     ''' <summary>
     ''' Procedimiento que lanza una excepcion cuando el primer parámetro es igual al segundo.
@@ -27,7 +29,7 @@ Module Modulo
     End Function
 
     ''' <summary>
-    ''' Imita a una marca de agua sobre un textBox.
+    ''' Intercambia el color y el texto de un textBox por una cadena vacía o por una cadena pasado como parámetro.
     ''' </summary>
     ''' <param name="textBox">Control textBox.</param>
     ''' <param name="textHint">Texto.</param>
@@ -40,4 +42,20 @@ Module Modulo
             textBox.ForeColor = Color.Gray
         End If
     End Sub
+
+    ''' <summary>
+    ''' Consigue los bytes de una imagen.
+    ''' </summary>
+    ''' <param name="ruta">Ruta de la imágen.</param>
+    ''' <returns>Array de bytes.</returns>
+    Public Async Function ConseguirThumbnail(ruta As String) As Task(Of Byte())
+        Dim vision As New VisionServiceClient(My.Settings.ThumApiKey, My.Settings.LinkConnect)
+
+        Using stream As Stream = System.IO.File.OpenRead(ruta)
+
+            Dim thumbnail As Byte() = Await vision.GetThumbnailAsync(stream, 400, 400, True)
+            Return thumbnail
+        End Using
+
+    End Function
 End Module

@@ -46,12 +46,12 @@ Partial Class NuevoUsuario
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.NUTipoComboBox = New System.Windows.Forms.ComboBox()
-        Me.TipoButton = New System.Windows.Forms.Button()
+        Me.NUTipoButton = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.NUFotoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.NUExaminaButton = New System.Windows.Forms.Button()
+        Me.NUExaminarButton = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.NUObservacionesRichTextBox = New System.Windows.Forms.RichTextBox()
@@ -311,7 +311,7 @@ Partial Class NuevoUsuario
         'Panel8
         '
         Me.Panel8.Controls.Add(Me.NUTipoComboBox)
-        Me.Panel8.Controls.Add(Me.TipoButton)
+        Me.Panel8.Controls.Add(Me.NUTipoButton)
         Me.Panel8.Controls.Add(Me.Label8)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(262, 134)
@@ -329,15 +329,15 @@ Partial Class NuevoUsuario
         Me.NUTipoComboBox.Size = New System.Drawing.Size(98, 21)
         Me.NUTipoComboBox.TabIndex = 5
         '
-        'TipoButton
+        'NUTipoButton
         '
-        Me.TipoButton.Location = New System.Drawing.Point(184, 14)
-        Me.TipoButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.TipoButton.Name = "TipoButton"
-        Me.TipoButton.Size = New System.Drawing.Size(27, 19)
-        Me.TipoButton.TabIndex = 4
-        Me.TipoButton.Text = "+"
-        Me.TipoButton.UseVisualStyleBackColor = True
+        Me.NUTipoButton.Location = New System.Drawing.Point(184, 14)
+        Me.NUTipoButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.NUTipoButton.Name = "NUTipoButton"
+        Me.NUTipoButton.Size = New System.Drawing.Size(27, 19)
+        Me.NUTipoButton.TabIndex = 4
+        Me.NUTipoButton.Text = "+"
+        Me.NUTipoButton.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -361,7 +361,7 @@ Partial Class NuevoUsuario
         'Panel10
         '
         Me.Panel10.Controls.Add(Me.NUFotoPictureBox)
-        Me.Panel10.Controls.Add(Me.NUExaminaButton)
+        Me.Panel10.Controls.Add(Me.NUExaminarButton)
         Me.Panel10.Controls.Add(Me.Label9)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel10.Location = New System.Drawing.Point(2, 200)
@@ -380,15 +380,15 @@ Partial Class NuevoUsuario
         Me.NUFotoPictureBox.TabIndex = 2
         Me.NUFotoPictureBox.TabStop = False
         '
-        'NUExaminaButton
+        'NUExaminarButton
         '
-        Me.NUExaminaButton.Location = New System.Drawing.Point(38, 6)
-        Me.NUExaminaButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.NUExaminaButton.Name = "NUExaminaButton"
-        Me.NUExaminaButton.Size = New System.Drawing.Size(56, 19)
-        Me.NUExaminaButton.TabIndex = 1
-        Me.NUExaminaButton.Text = "Examinar"
-        Me.NUExaminaButton.UseVisualStyleBackColor = True
+        Me.NUExaminarButton.Location = New System.Drawing.Point(38, 6)
+        Me.NUExaminarButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.NUExaminarButton.Name = "NUExaminarButton"
+        Me.NUExaminarButton.Size = New System.Drawing.Size(70, 19)
+        Me.NUExaminarButton.TabIndex = 1
+        Me.NUExaminarButton.Text = "Examinar"
+        Me.NUExaminarButton.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -447,7 +447,7 @@ Partial Class NuevoUsuario
         Me.NUCancelarButton.Location = New System.Drawing.Point(134, 23)
         Me.NUCancelarButton.Margin = New System.Windows.Forms.Padding(2)
         Me.NUCancelarButton.Name = "NUCancelarButton"
-        Me.NUCancelarButton.Size = New System.Drawing.Size(56, 19)
+        Me.NUCancelarButton.Size = New System.Drawing.Size(66, 19)
         Me.NUCancelarButton.TabIndex = 1
         Me.NUCancelarButton.Text = "Cancelar"
         Me.NUCancelarButton.UseVisualStyleBackColor = True
@@ -521,12 +521,12 @@ Partial Class NuevoUsuario
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents NUTipoComboBox As ComboBox
-    Friend WithEvents TipoButton As Button
+    Friend WithEvents NUTipoButton As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents NUFotoPictureBox As PictureBox
-    Friend WithEvents NUExaminaButton As Button
+    Friend WithEvents NUExaminarButton As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents NUObservacionesRichTextBox As RichTextBox

@@ -20,7 +20,7 @@
         Me.Close()
     End Sub
 
-    Private Sub TipoButton_Click(sender As Object, e As EventArgs) Handles TipoButton.Click
+    Private Sub NUTipoButton_Click(sender As Object, e As EventArgs) Handles NUTipoButton.Click
         MessageBox.Show("Confirmado", "Nuevo usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
     End Sub
@@ -36,7 +36,7 @@
         End If
     End Sub
 
-    Private Sub NUExaminaButton_Click(sender As Object, e As EventArgs) Handles NUExaminaButton.Click
+    Private Sub NUExaminarButton_Click(sender As Object, e As EventArgs) Handles NUExaminarButton.Click
 
     End Sub
 End Class

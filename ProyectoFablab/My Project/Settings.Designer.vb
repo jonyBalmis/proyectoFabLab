@@ -60,10 +60,46 @@ Namespace My
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=FabLab;Integrated Security=Tru"& _ 
             "e;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent"& _ 
             "=ReadWrite;MultiSubnetFailover=False")>  _
-        Public ReadOnly Property conexion() As String
+        Public ReadOnly Property Conexion() As String
             Get
-                Return CType(Me("conexion"),String)
+                Return CType(Me("Conexion"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("c50e8657acd5465889ed8a2bb450d8c0")>  _
+        Public Property ThumApiKey() As String
+            Get
+                Return CType(Me("ThumApiKey"),String)
+            End Get
+            Set
+                Me("ThumApiKey") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://westcentralus.api.cognitive.microsoft.com/vision/v1.0")>  _
+        Public Property LinkConnect() As String
+            Get
+                Return CType(Me("LinkConnect"),String)
+            End Get
+            Set
+                Me("LinkConnect") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("..\..\Resources\")>  _
+        Public Property Ruta() As String
+            Get
+                Return CType(Me("Ruta"),String)
+            End Get
+            Set
+                Me("Ruta") = value
+            End Set
         End Property
     End Class
 End Namespace

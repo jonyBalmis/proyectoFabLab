@@ -239,6 +239,7 @@ Partial Class VentanaPrincipal
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "VentanaPrincipal"
         Me.Text = "FabLab Balmis-Ventana Principal"

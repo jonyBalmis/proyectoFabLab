@@ -32,8 +32,8 @@
 
     Public Sub InsertarUsuario(nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As String, observaciones As String)
         Dim filasAfectadas As Integer
-        Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.conexion)
-        Dim gatewayUsuario As GatewayUsuario = New GatewayUsuario(My.Settings.conexion)
+        Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
+        Dim gatewayUsuario As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
         Dim tipoId As Integer = gatewayTipo.SeleccionarId(tipo)
         ContactoObligatorio(telefono, email)
 
@@ -47,7 +47,7 @@
     End Sub
 
     Public Function TiposUsuarios() As DataTable
-        Dim tipos As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.conexion)
+        Dim tipos As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
 
         Return tipos.SeleccionarTodos()
     End Function
