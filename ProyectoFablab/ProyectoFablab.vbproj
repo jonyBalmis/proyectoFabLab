@@ -79,7 +79,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base de Datos\GatewayMaquinas.vb" />
     <Compile Include="Base de Datos\GatewayReservas.vb" />
+    <Compile Include="Base de Datos\GatewayTipoMaquina.vb" />
     <Compile Include="Base de Datos\GatewayTipoUsuario.vb" />
     <Compile Include="Base de Datos\GatewayUsuario.vb" />
     <Compile Include="Interfaz\AcercaDe.Designer.vb">
