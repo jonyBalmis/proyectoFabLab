@@ -160,14 +160,14 @@ Public Class GatewayUsuario
 
 
     ''' <summary>
-    ''' Selecciona todos los usuarios.
+    ''' Selecciona todos los usuarios y tipos.
     ''' </summary>
     ''' <returns>Regresa todos los registros en un objeto dataTable.</returns>
     Public Function SeleccionarTodos() As DataTable
         Dim consulta As String
         Dim resultado As New DataTable
         Dim lectura As SqlDataReader
-        consulta = "SELECT * FROM usuarios"
+        consulta = "SELECT * FROM Usuarios INNER JOIN TiposUsuario ON Usuarios.tipo= TiposUsuario.id"
         Try
             conexion.Open()
             comando.CommandText = consulta
