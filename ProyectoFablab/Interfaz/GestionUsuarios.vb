@@ -2,6 +2,7 @@
     Private Enlace As BindingSource
     Dim resultado As New DataSet
     Dim usuarios As DataTable
+    Dim marca As String
 
     Private Sub TextBox1_Enter(sender As Object, e As EventArgs) Handles GUBuscarTextBox.Enter, GUBuscarTextBox.Leave
         HintTextBox(GUBuscarTextBox, "buscar")
@@ -20,6 +21,7 @@
         GUDataGridView.Columns(10).Visible = False
         GUDataGridView.Columns(11).Visible = False
         GUDataGridView.Columns(12).DisplayIndex = 8
+
     End Sub
 
     Private Sub GUBuscarTextBox_TextChanged(sender As Object, e As EventArgs) Handles GUBuscarTextBox.TextChanged
@@ -28,4 +30,5 @@
         GUDataGridView.DataSource = Enlace
 
     End Sub
+
 End Class

@@ -48,7 +48,7 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
@@ -63,7 +63,7 @@ Partial Class GestionMaquinas
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(2, 2)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(663, 53)
         Me.Panel1.TabIndex = 0
@@ -71,7 +71,7 @@ Partial Class GestionMaquinas
         'GMBuscarTextBox
         '
         Me.GMBuscarTextBox.Location = New System.Drawing.Point(35, 18)
-        Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.GMBuscarTextBox.Name = "GMBuscarTextBox"
         Me.GMBuscarTextBox.Size = New System.Drawing.Size(201, 20)
         Me.GMBuscarTextBox.TabIndex = 1
@@ -80,7 +80,7 @@ Partial Class GestionMaquinas
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Location = New System.Drawing.Point(537, 14)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(89, 26)
         Me.Button4.TabIndex = 0
@@ -92,7 +92,7 @@ Partial Class GestionMaquinas
         Me.Panel2.Controls.Add(Me.GMTablaDataGridView)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(2, 59)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(663, 264)
         Me.Panel2.TabIndex = 1
@@ -102,7 +102,7 @@ Partial Class GestionMaquinas
         Me.GMTablaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GMTablaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GMTablaDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.GMTablaDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GMTablaDataGridView.Margin = New System.Windows.Forms.Padding(2)
         Me.GMTablaDataGridView.Name = "GMTablaDataGridView"
         Me.GMTablaDataGridView.RowTemplate.Height = 24
         Me.GMTablaDataGridView.Size = New System.Drawing.Size(663, 264)
@@ -115,7 +115,7 @@ Partial Class GestionMaquinas
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(2, 327)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(663, 55)
         Me.Panel3.TabIndex = 2
@@ -123,7 +123,7 @@ Partial Class GestionMaquinas
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(567, 18)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(72, 22)
         Me.Button3.TabIndex = 2
@@ -133,7 +133,7 @@ Partial Class GestionMaquinas
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(490, 18)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(72, 22)
         Me.Button2.TabIndex = 1
@@ -143,7 +143,7 @@ Partial Class GestionMaquinas
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(414, 18)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(72, 22)
         Me.Button1.TabIndex = 0
@@ -156,7 +156,7 @@ Partial Class GestionMaquinas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(667, 384)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "GestionMaquinas"
         Me.Text = "FabLab-Gestion de Maquinas"
         Me.TableLayoutPanel1.ResumeLayout(False)

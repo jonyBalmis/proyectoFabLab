@@ -34,9 +34,11 @@ Module Modulo
     ''' <param name="textBox">Control textBox.</param>
     ''' <param name="textHint">Texto.</param>
     Public Sub HintTextBox(textBox As TextBox, textHint As String)
+
         If textBox.Focused And textBox.ForeColor = Color.Gray Then
             textBox.Text = ""
             textBox.ForeColor = Color.Black
+
         ElseIf Not textBox.Focused And textBox.Text.Length = 0 Then
             textBox.Text = textHint
             textBox.ForeColor = Color.Gray
