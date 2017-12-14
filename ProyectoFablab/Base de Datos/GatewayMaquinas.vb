@@ -30,10 +30,10 @@ Public Class GatewayMaquinas
     ''' <param name="descripcion">Descripcion de la maquina</param>
     ''' <param name="caracteristicas">Caracteristicas de la maquina</param>
     ''' <returns>Número de filas afectadas por la consulta</returns>
-    Public Function Insertar(modelo As String, precio_hora As Double, fecha_compra As String, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
+    Public Function Insertar(modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
-        Dim consulta As String = String.Format("INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefonos_sat,tipo,descripcion,caracteristicas) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas)
+        Dim consulta As String = String.Format("INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefono_sat,tipo,descripcion,caracteristicas) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas)
         'Validamos los datos
         If modelo = "" Or modelo Is Nothing Then
             Throw New ArgumentException("El modelo no puede estar vacío")
@@ -41,7 +41,7 @@ Public Class GatewayMaquinas
         If precio_hora <= 0 Then
             Throw New ArgumentException("El precio debe ser mayor que 0")
         End If
-        If fecha_compra = "" Or fecha_compra Is Nothing Then
+        If fecha_compra = Nothing Then
             Throw New ArgumentException("La fecha no puede estar vacia")
         End If
         If telefono_sat = "" Or telefono_sat Is Nothing Then
@@ -78,10 +78,10 @@ Public Class GatewayMaquinas
     ''' <param name="descripcion">Descripcion de la maquina</param>
     ''' <param name="caracteristicas">Caracteristicas de la maquina</param>
     ''' <returns>Número de filas afectadas por la consulta</returns>
-    Public Function Insertar(id As Integer, modelo As String, precio_hora As Double, fecha_compra As String, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
+    Public Function Insertar(id As Integer, modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
-        Dim consulta As String = String.Format("UPDATE Maquinas SET modelo='{0}',precio_hora='{1}',fecha_compra='{2}',telefonos_sat='{3}',tipo='{4}',descripcion='{5}',caracteristicas='{6}' WHERE id='{7}'", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas, id)
+        Dim consulta As String = String.Format("UPDATE Maquinas SET modelo='{0}',precio_hora='{1}',fecha_compra='{2}',telefono_sat='{3}',tipo='{4}',descripcion='{5}',caracteristicas='{6}' WHERE id='{7}'", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas, id)
         'Validamos los datos
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede ser 0")
@@ -92,7 +92,7 @@ Public Class GatewayMaquinas
         If precio_hora <= 0 Then
             Throw New ArgumentException("El precio debe ser mayor que 0")
         End If
-        If fecha_compra = "" Or fecha_compra Is Nothing Then
+        If fecha_compra = Nothing Then
             Throw New ArgumentException("La fecha no puede estar vacia")
         End If
         If telefono_sat = "" Or telefono_sat Is Nothing Then

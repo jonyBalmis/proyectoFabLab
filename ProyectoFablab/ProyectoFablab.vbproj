@@ -156,8 +156,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Negocio\Maquinas.vb" />
     <Compile Include="Negocio\Negocio.vb" />
     <Compile Include="Negocio\Reservas.vb" />
+    <Compile Include="Negocio\TipoMaquina.vb" />
     <Compile Include="Negocio\TipoUsuario.vb" />
     <Compile Include="Negocio\Usuario.vb" />
   </ItemGroup>

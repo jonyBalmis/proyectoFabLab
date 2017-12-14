@@ -134,4 +134,33 @@ Public Class GatewayTipoMaquinas
 
         Return id
     End Function
+    ''' <summary>
+    ''' Método para seleccionar todos los registros de la tabla
+    ''' </summary>
+    ''' <returns>Un objeto DataTable con todos los registros</returns>
+    Public Function SeleccionarTodos() As DataTable
+        'Creamos la sentencia SQL de selección
+        Dim consulta As String = String.Format("SELECT * FROM TiposMaquina")
+        Dim resultado As New DataTable
+        Dim lector As SqlDataReader
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            lector = comando.ExecuteReader()
+
+            'Cargamos el DataTable
+            resultado.Load(lector)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        'Devolvemos el resultado
+        Return resultado
+    End Function
 End Class
