@@ -9,15 +9,17 @@
     ''' <param name="tipo">Tipo de maquina</param>
     ''' <param name="descripcion">Descripcion de la maquina</param>
     ''' <param name="caracteristicas">Caracteristicas de la maquina</param>
-    Public Sub InsertarTelefono(modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String)
+    Public Sub Insertar(modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As String, descripcion As String, caracteristicas As String)
         Dim gateway As New GatewayMaquinas(My.Settings.Conexion)
+        Dim gatewaytipo As New GatewayTipoMaquinas(My.Settings.Conexion)
+        Dim tipom As Integer = gatewaytipo.SeleccionarId(tipo)
         If precio_hora <= 0 Then
             Throw New ArgumentException("El precio por hora tiene que ser mayor que 0")
         End If
         If ComprobarRepetidos(modelo, fecha_compra) = False Then
             Throw New ArgumentException("No puede haber dos modelos iguales con la misma fecha de compra")
         End If
-        gateway.Insertar(modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas)
+        gateway.Insertar(modelo, precio_hora, fecha_compra, telefono_sat, tipom, descripcion, caracteristicas)
 
 
     End Sub

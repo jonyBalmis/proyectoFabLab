@@ -48,7 +48,7 @@ Partial Class GestionUsuarios
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
@@ -63,7 +63,7 @@ Partial Class GestionUsuarios
         Me.Panel2.Controls.Add(Me.GUNuevoButton)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(4, 4)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(701, 53)
         Me.Panel2.TabIndex = 2
@@ -72,7 +72,7 @@ Partial Class GestionUsuarios
         '
         Me.GUBuscarTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GUBuscarTextBox.Location = New System.Drawing.Point(75, 14)
-        Me.GUBuscarTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUBuscarTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.GUBuscarTextBox.Name = "GUBuscarTextBox"
         Me.GUBuscarTextBox.Size = New System.Drawing.Size(132, 22)
         Me.GUBuscarTextBox.TabIndex = 2
@@ -81,7 +81,7 @@ Partial Class GestionUsuarios
         '
         Me.GUNuevoButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GUNuevoButton.Location = New System.Drawing.Point(511, 10)
-        Me.GUNuevoButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUNuevoButton.Margin = New System.Windows.Forms.Padding(4)
         Me.GUNuevoButton.Name = "GUNuevoButton"
         Me.GUNuevoButton.Size = New System.Drawing.Size(127, 28)
         Me.GUNuevoButton.TabIndex = 1
@@ -95,7 +95,7 @@ Partial Class GestionUsuarios
         Me.Panel1.Controls.Add(Me.GUEditarButton)
         Me.Panel1.Controls.Add(Me.GUConsultarButton)
         Me.Panel1.Location = New System.Drawing.Point(4, 248)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(701, 109)
         Me.Panel1.TabIndex = 1
@@ -104,7 +104,7 @@ Partial Class GestionUsuarios
         '
         Me.GUEliminarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GUEliminarButton.Location = New System.Drawing.Point(537, 28)
-        Me.GUEliminarButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUEliminarButton.Margin = New System.Windows.Forms.Padding(4)
         Me.GUEliminarButton.Name = "GUEliminarButton"
         Me.GUEliminarButton.Size = New System.Drawing.Size(100, 28)
         Me.GUEliminarButton.TabIndex = 2
@@ -115,7 +115,7 @@ Partial Class GestionUsuarios
         '
         Me.GUEditarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GUEditarButton.Location = New System.Drawing.Point(417, 28)
-        Me.GUEditarButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUEditarButton.Margin = New System.Windows.Forms.Padding(4)
         Me.GUEditarButton.Name = "GUEditarButton"
         Me.GUEditarButton.Size = New System.Drawing.Size(100, 28)
         Me.GUEditarButton.TabIndex = 1
@@ -126,7 +126,7 @@ Partial Class GestionUsuarios
         '
         Me.GUConsultarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GUConsultarButton.Location = New System.Drawing.Point(297, 28)
-        Me.GUConsultarButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUConsultarButton.Margin = New System.Windows.Forms.Padding(4)
         Me.GUConsultarButton.Name = "GUConsultarButton"
         Me.GUConsultarButton.Size = New System.Drawing.Size(100, 28)
         Me.GUConsultarButton.TabIndex = 0
@@ -138,7 +138,7 @@ Partial Class GestionUsuarios
         Me.Panel3.Controls.Add(Me.GUDataGridView)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(4, 65)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(701, 175)
         Me.Panel3.TabIndex = 3
@@ -150,7 +150,7 @@ Partial Class GestionUsuarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GUDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GUDataGridView.Location = New System.Drawing.Point(64, 0)
-        Me.GUDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GUDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.GUDataGridView.Name = "GUDataGridView"
         Me.GUDataGridView.Size = New System.Drawing.Size(573, 175)
         Me.GUDataGridView.TabIndex = 1
@@ -161,7 +161,7 @@ Partial Class GestionUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(709, 361)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "GestionUsuarios"
         Me.Text = "FabLab - Gestión de usuarios"
         Me.TableLayoutPanel1.ResumeLayout(False)
