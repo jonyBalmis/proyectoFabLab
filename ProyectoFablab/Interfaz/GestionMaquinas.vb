@@ -1,6 +1,7 @@
 ﻿Public Class GestionMaquinas
     Private maquina As DataTable
     Private source As BindingSource
+    Dim dataSet As DataSet
 
 
     Private Sub GestionMaquinas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,6 +28,11 @@
 
     Private Sub GMBuscarTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles GMBuscarTextBox.KeyPress
 
-        source.Filter = "nombre LIKE '%" & GMBuscarTextBox.Text & "%'"
+
+
+        dataSet = New DataSet()
+        dataSet.Tables.Add(Maquinas.ObtenerMaquinas())
+        source = New BindingSource(dataSet, "Maquinas")
+        source.Filter = "modelo LIKE '%" & GMBuscarTextBox.Text & "%'"
     End Sub
 End Class
