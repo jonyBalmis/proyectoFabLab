@@ -42,7 +42,7 @@ Partial Class AcercaDe
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(292, 81)
+        Me.Label1.Location = New System.Drawing.Point(292, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(134, 23)
         Me.Label1.TabIndex = 1
@@ -51,9 +51,9 @@ Partial Class AcercaDe
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(292, 149)
+        Me.Label2.Location = New System.Drawing.Point(292, 165)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(302, 66)
+        Me.Label2.Size = New System.Drawing.Size(348, 83)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "FabLab es una realidad gracias al proyecto de Alejandro Quiroga y Jonathan Guevar" &
     "a."
@@ -61,9 +61,9 @@ Partial Class AcercaDe
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(292, 104)
+        Me.Label3.Location = New System.Drawing.Point(292, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(325, 45)
+        Me.Label3.Size = New System.Drawing.Size(348, 77)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Copyright © 2017 FabLab Corporation. Reservados todos los derechos."
         '
