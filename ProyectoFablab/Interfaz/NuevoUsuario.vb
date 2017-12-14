@@ -2,9 +2,10 @@
 Imports System.IO
 Public Class NuevoUsuario
 
-
+    Private imagenSeleccionada As Boolean
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActualizarComboBox()
+        imagenSeleccionada = False
     End Sub
 
     Private Sub NUAceptarButton_Click(sender As Object, e As EventArgs) Handles NUAceptarButton.Click
@@ -50,6 +51,7 @@ Public Class NuevoUsuario
             Me.NUFotoPictureBox.Image = Image.FromFile(rutaImagen)
             Me.NUFotoPictureBox.ImageLocation = rutaImagen
             Me.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+            imagenSeleccionada = True
         End If
     End Sub
 
@@ -58,9 +60,12 @@ Public Class NuevoUsuario
         Dim thumbnail As Byte()
         Dim nombreImagen As String
 
-        thumbnail = Await ConseguirThumbnail(NUFotoPictureBox.ImageLocation)
-        nombreImagen = identificador & Path.GetExtension(NUFotoPictureBox.ImageLocation)
-        File.WriteAllBytes(My.Settings.usuariosImg & nombreImagen, thumbnail)
+        If imagenSeleccionada Then
+            thumbnail = Await ConseguirThumbnail(NUFotoPictureBox.ImageLocation)
+            nombreImagen = identificador & Path.GetExtension(NUFotoPictureBox.ImageLocation)
+            File.WriteAllBytes(My.Settings.usuariosImg & nombreImagen, thumbnail)
+        End If
+
 
     End Sub
 
