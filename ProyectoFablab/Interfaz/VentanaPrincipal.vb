@@ -3,6 +3,7 @@
     Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click
         Dim nuevo As NuevoUsuario = New NuevoUsuario()
         nuevo.MdiParent = Me
+        nuevo.ActualizarComboBox()
         nuevo.Show()
     End Sub
 

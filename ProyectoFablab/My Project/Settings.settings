@@ -15,10 +15,10 @@
     <Setting Name="LinkConnect" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://westcentralus.api.cognitive.microsoft.com/vision/v1.0</Value>
     </Setting>
-    <Setting Name="usuariosImg" Type="System.String" Scope="User">
+    <Setting Name="UsuariosImg" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\Imagenes\Usuarios\</Value>
     </Setting>
-    <Setting Name="maquinasImg" Type="System.String" Scope="User">
+    <Setting Name="MaquinasImg" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\Imagenes\Maquinas\</Value>
     </Setting>
   </Settings>

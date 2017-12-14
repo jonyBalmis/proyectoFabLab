@@ -225,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="industrial-robot.ico" />
+    <None Include="Resources\contacto.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\gestion.png" />

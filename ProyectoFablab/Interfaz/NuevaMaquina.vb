@@ -21,7 +21,7 @@
             Dim filename As String = dlg.FileName
             My.Computer.FileSystem.CopyFile(
             filename,
-            My.Settings.maquinasImg + "",
+            My.Settings.MaquinasImg + "",
             Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
             Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
             'ImagenPictureBox.ImageLocation = filename

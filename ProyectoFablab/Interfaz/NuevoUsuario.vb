@@ -4,7 +4,7 @@ Public Class NuevoUsuario
 
     Private imagenSeleccionada As Boolean
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ActualizarComboBox()
+
         imagenSeleccionada = False
     End Sub
 
@@ -63,7 +63,7 @@ Public Class NuevoUsuario
         If imagenSeleccionada Then
             thumbnail = Await ConseguirThumbnail(NUFotoPictureBox.ImageLocation)
             nombreImagen = identificador & Path.GetExtension(NUFotoPictureBox.ImageLocation)
-            File.WriteAllBytes(My.Settings.usuariosImg & nombreImagen, thumbnail)
+            File.WriteAllBytes(My.Settings.UsuariosImg & nombreImagen, thumbnail)
         End If
 
 
