@@ -145,4 +145,25 @@ Public Class GatewayTipoUsuario
 
         Return id
     End Function
+
+    Public Function SeleccionarTipo(id As Integer) As String
+
+        Dim consulta As String
+        Dim tipo As String
+        consulta = "SELECT tipo FROM TiposUsuario WHERE id=" & id
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            tipo = DirectCast(comando.ExecuteScalar(), String)
+
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion Is Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return tipo
+    End Function
 End Class

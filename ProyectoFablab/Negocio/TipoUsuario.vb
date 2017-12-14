@@ -19,4 +19,14 @@
         Return False
 
     End Function
+
+    ''' <summary>
+    ''' Metodo que devuelve el tipo de usuario.
+    ''' </summary>
+    ''' <param name="id">Identificador del usuario</param>
+    ''' <returns>Tipo de usuario</returns>
+    Public Function SeleccionarTipo(id As Integer) As String
+        Dim tipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
+        Return tipo.SeleccionarTipo(id)
+    End Function
 End Module
