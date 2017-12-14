@@ -56,6 +56,6 @@
 
     Public Function SeleccionarUsuarios() As DataTable
         Dim usuarios As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
-        Return usuarios.SeleccionarCamposTabla()
+        Return usuarios.SeleccionarTodos()
     End Function
 End Module

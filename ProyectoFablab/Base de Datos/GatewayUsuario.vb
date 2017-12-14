@@ -258,24 +258,5 @@ Public Class GatewayUsuario
         Return resultado
     End Function
 
-    Public Function SeleccionarCamposTabla() As DataTable
-        Dim consulta As String
-        Dim resultado As New DataTable
-        Dim lectura As SqlDataReader
 
-        consulta = "SELECT id ,CONCAT(nombre,' ' ,apellidos) AS 'Nombre', tipo AS 'Tipo', organizacion AS 'Organización', fecha_alta AS 'Fecha de alta' FROM usuarios "
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            lectura = comando.ExecuteReader()
-            resultado.Load(lectura)
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
-            End If
-        End Try
-        Return resultado
-    End Function
 End Class
