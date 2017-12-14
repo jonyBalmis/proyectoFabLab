@@ -110,10 +110,10 @@
     <Compile Include="Interfaz\GestionUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaz\MaquinasEvento.Designer.vb">
-      <DependentUpon>MaquinasEvento.vb</DependentUpon>
+    <Compile Include="Interfaz\NuevaMaquina.Designer.vb">
+      <DependentUpon>NuevaMaquina.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz\MaquinasEvento.vb">
+    <Compile Include="Interfaz\NuevaMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaz\NuevoTipoUsuario.Designer.vb">
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="Interfaz\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz\MaquinasEvento.resx">
-      <DependentUpon>MaquinasEvento.vb</DependentUpon>
+    <EmbeddedResource Include="Interfaz\NuevaMaquina.resx">
+      <DependentUpon>NuevaMaquina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\NuevoTipoUsuario.resx">
       <DependentUpon>NuevoTipoUsuario.vb</DependentUpon>
