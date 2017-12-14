@@ -11,6 +11,8 @@
         GUDataGridView.Columns(3).Visible = False
         GUDataGridView.Columns(6).Visible = False
         GUDataGridView.Columns(7).Visible = False
+        GUDataGridView.Columns(8).Visible = False
+        GUDataGridView.Columns(9).Visible = False
         GUDataGridView.Columns(5).DisplayIndex = 2
     End Sub
 End Class

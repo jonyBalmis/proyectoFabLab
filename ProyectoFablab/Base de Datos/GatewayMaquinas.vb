@@ -156,7 +156,7 @@ Public Class GatewayMaquinas
     ''' <returns>Un objeto DataTable con todos los registros</returns>
     Public Function SeleccionarTodos() As DataTable
         'Creamos la sentencia SQL de selección
-        Dim consulta As String = String.Format("SELECT * FROM Maquinas")
+        Dim consulta As String = String.Format("SELECT * FROM Maquinas INNER JOIN TiposMaquina ON Maquinas.tipo= TiposMaquina.id")
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
 

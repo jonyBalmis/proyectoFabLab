@@ -24,7 +24,7 @@ Partial Class GestionMaquinas
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GMBuscarTextBox = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GMTablaDataGridView = New System.Windows.Forms.DataGridView()
@@ -59,7 +59,7 @@ Partial Class GestionMaquinas
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.GMBuscarTextBox)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 2)
@@ -68,14 +68,13 @@ Partial Class GestionMaquinas
         Me.Panel1.Size = New System.Drawing.Size(883, 66)
         Me.Panel1.TabIndex = 0
         '
-        'TextBox1
+        'GMBuscarTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(47, 22)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(267, 22)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "search"
+        Me.GMBuscarTextBox.Location = New System.Drawing.Point(47, 22)
+        Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GMBuscarTextBox.Name = "GMBuscarTextBox"
+        Me.GMBuscarTextBox.Size = New System.Drawing.Size(267, 22)
+        Me.GMBuscarTextBox.TabIndex = 1
         '
         'Button4
         '
@@ -178,6 +177,6 @@ Partial Class GestionMaquinas
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents GMTablaDataGridView As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GMBuscarTextBox As TextBox
     Friend WithEvents Button4 As Button
 End Class
