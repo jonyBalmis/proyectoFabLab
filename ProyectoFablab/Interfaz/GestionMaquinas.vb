@@ -9,4 +9,6 @@
         GMTablaDataGridView.Columns(5).DisplayIndex = 2
 
     End Sub
+
+
 End Class
