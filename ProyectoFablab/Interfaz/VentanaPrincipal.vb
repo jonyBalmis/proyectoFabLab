@@ -23,7 +23,9 @@
     End Sub
 
     Private Sub UsuarioIcoToolStripButton_Click(sender As Object, e As EventArgs) Handles UsuarioIcoToolStripButton.Click
+
         NuevoUsuarioToolStripMenuItem.PerformClick()
+
     End Sub
 
     Private Sub VentanaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load

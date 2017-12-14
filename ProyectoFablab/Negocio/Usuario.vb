@@ -46,7 +46,10 @@
 
     End Sub
 
-
+    ''' <summary>
+    ''' Obtiene el identificador de la última fila. 
+    ''' </summary>
+    ''' <returns>Identificador.</returns>
     Public Function ObtenerUltimoId() As Integer
         Dim gatewayUsuario As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
         Dim total As Integer = gatewayUsuario.SeleccionarTodos().Rows.Count
