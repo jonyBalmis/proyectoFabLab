@@ -29,23 +29,6 @@ Module Modulo
     End Function
 
     ''' <summary>
-    ''' Intercambia el color y el texto de un textBox por una cadena vacía o por una cadena pasado como parámetro.
-    ''' </summary>
-    ''' <param name="textBox">Control textBox.</param>
-    ''' <param name="textHint">Texto.</param>
-    Public Sub HintTextBox(textBox As TextBox, textHint As String)
-
-        If textBox.Focused And textBox.ForeColor = Color.Gray Then
-            textBox.Text = ""
-            textBox.ForeColor = Color.Black
-
-        ElseIf Not textBox.Focused And textBox.Text.Length = 0 Then
-            textBox.Text = textHint
-            textBox.ForeColor = Color.Gray
-        End If
-    End Sub
-
-    ''' <summary>
     ''' Consigue los bytes de una imagen.
     ''' </summary>
     ''' <param name="ruta">Ruta de la imágen.</param>

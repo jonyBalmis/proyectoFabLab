@@ -32,11 +32,13 @@ Partial Class GestionMaquinas
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.GMTablaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -59,6 +61,7 @@ Partial Class GestionMaquinas
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.GMBuscarTextBox)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -70,7 +73,7 @@ Partial Class GestionMaquinas
         '
         'GMBuscarTextBox
         '
-        Me.GMBuscarTextBox.Location = New System.Drawing.Point(35, 18)
+        Me.GMBuscarTextBox.Location = New System.Drawing.Point(9, 18)
         Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.GMBuscarTextBox.Name = "GMBuscarTextBox"
         Me.GMBuscarTextBox.Size = New System.Drawing.Size(201, 20)
@@ -150,6 +153,15 @@ Partial Class GestionMaquinas
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ProyectoFablab.My.Resources.Resources.search
+        Me.PictureBox1.Location = New System.Drawing.Point(215, 18)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 20)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'GestionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -165,6 +177,7 @@ Partial Class GestionMaquinas
         Me.Panel2.ResumeLayout(False)
         CType(Me.GMTablaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -179,4 +192,5 @@ Partial Class GestionMaquinas
     Friend WithEvents GMTablaDataGridView As DataGridView
     Friend WithEvents GMBuscarTextBox As TextBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
