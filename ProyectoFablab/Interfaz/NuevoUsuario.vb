@@ -14,6 +14,7 @@ Public Class NuevoUsuario
                 Usuario.Insertar(NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
                 Me.id = Usuario.ObtenerUltimoId()
                 GuardarImagen(Me.id)
+                VentanaPrincipal.ActualizarEstados()
                 MessageBox.Show(NUNombreTextBox.Text & " ha sido registrado.", "Usuario registrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ElseIf NUAceptarButton.Text.Equals("Guardar") Then
