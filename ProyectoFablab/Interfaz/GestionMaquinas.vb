@@ -6,8 +6,11 @@
 
 
     Private Sub GestionMaquinas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         CargarDatos()
+        GMTablaDataGridView.Columns(1).HeaderText = "Modelo"
+        GMTablaDataGridView.Columns(2).HeaderText = "Precio / Hora"
+        GMTablaDataGridView.Columns(9).HeaderText = "Tipo de Máquina"
+        GMTablaDataGridView.Columns(4).HeaderText = "Teléfono SAT"
     End Sub
     Public Sub CargarDatos()
         dataSet = New DataSet()

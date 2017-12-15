@@ -130,7 +130,7 @@ Public Class GatewayMaquinas
         Dim Reservas As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de eliminación
-        Dim consulta As String = String.Format("DELETE FROM Telefonos WHERE id={0})", id)
+        Dim consulta As String = String.Format("DELETE FROM Maquinas WHERE id={0}", id)
 
         'Validamos los datos
         If id = 0 Then
@@ -141,7 +141,7 @@ Public Class GatewayMaquinas
         Try
 
             conexion.Open()
-            comando.CommandText = "SELECT COUNT(Maq.Reserva) FROM MaquinasReserva Maq WHERE  Maq.Maquina = 1"
+            comando.CommandText = "SELECT COUNT(*) FROM MaquinasReserva Maq WHERE  Maquina = " + CType(id, String)
             Reservas = DirectCast(comando.ExecuteScalar(), Integer)
             If Reservas > 0 Then
                 MessageBox.Show("No se puede eliminar una maquina que tenga reservas ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
