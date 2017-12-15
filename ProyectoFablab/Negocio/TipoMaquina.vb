@@ -15,6 +15,8 @@
         Return True
 
     End Function
+
+
     ''' <summary>
     ''' Método para actualizar un nuevo registro en la base de datos
     ''' </summary>
@@ -30,8 +32,9 @@
             gateway.Actualizar(id, tipo)
         End If
         Return True
-
     End Function
+
+
     ''' <summary>
     ''' Obtiene un DataTable con todos los tipos de maquinas de la base de datos
     ''' </summary>
@@ -40,6 +43,8 @@
         Dim gateway As New GatewayTipoMaquinas(My.Settings.Conexion)
         Return gateway.SeleccionarTodos()
     End Function
+
+
     ''' <summary>
     ''' Obtiene tipo de maquina a partir de su nombre
     ''' </summary>
@@ -49,6 +54,8 @@
         Dim gateway As New GatewayTipoMaquinas(My.Settings.Conexion)
         Return gateway.SeleccionarId(tipo)
     End Function
+
+
     ''' <summary>
     ''' Borra un tipo de maquina con un ID
     ''' </summary>

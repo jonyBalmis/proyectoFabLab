@@ -1,10 +1,20 @@
 ﻿Module TipoUsuario
+
+    ''' <summary>
+    ''' Obtiene los tipos de usuarios.
+    ''' </summary>
+    ''' <returns>Un objedto de tipo dataTable.</returns>
     Public Function SeleccionarTipos() As DataTable
         Dim tipos As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
 
         Return tipos.SeleccionarTodos()
     End Function
 
+    ''' <summary>
+    ''' Registra un tipo en la base de datos.
+    ''' </summary>
+    ''' <param name="nuevo">Nuevo tipo.</param>
+    ''' <returns>Valor booleano</returns>
     Public Function InsertarTipo(nuevo As String) As Boolean
 
         Dim tipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)

@@ -31,6 +31,19 @@
         End If
     End Sub
 
+
+    ''' <summary>
+    ''' Registra a un usuario en la base de datos.
+    ''' </summary>
+    ''' <param name="nombre">Nombre del usuario.</param>
+    ''' <param name="apellidos">Apellidos del usuario.</param>
+    ''' <param name="fechaNac">Fecha de nacimiento del usuario.</param>
+    ''' <param name="telefono">Teléfono del usuario</param>
+    ''' <param name="email">Correo del usuario</param>
+    ''' <param name="direccion">Dirección del usuario</param>
+    ''' <param name="organizacion">Organizacion del usuario</param>
+    ''' <param name="tipo">Tipo de usuario</param>
+    ''' <param name="observaciones">Dato opcional.</param>
     Public Sub Insertar(nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As String, observaciones As String)
         Dim filasAfectadas As Integer
         Try
@@ -59,11 +72,30 @@
         Return DirectCast(ultimaFila.Item(0), Integer)
     End Function
 
+    ''' <summary>
+    ''' Selecciona todos los usuarios.
+    ''' </summary>
+    ''' <returns>Un objeto de tipo DataTable.</returns>
     Public Function SeleccionarUsuarios() As DataTable
         Dim usuarios As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
         Return usuarios.SeleccionarTodos()
     End Function
 
+
+    ''' <summary>
+    ''' Modifica un registro de la base de datos.
+    ''' </summary>
+    ''' <param name="id">Identificador del usuario.</param>
+    ''' <param name="nombre">Nombre del usuario.</param>
+    ''' <param name="apellidos">Apellidos del usuario.</param>
+    ''' <param name="fechaNac">Fecha de nacimiento del usuario.</param>
+    ''' <param name="telefono">Teléfono del usuario</param>
+    ''' <param name="email">Correo del usuario</param>
+    ''' <param name="direccion">Dirección del usuario</param>
+    ''' <param name="organizacion">Organizacion del usuario</param>
+    ''' <param name="tipo">Tipo de usuario</param>
+    ''' <param name="observaciones">Dato opcional.</param>
+    ''' <returns>Valor booleano.</returns>
     Public Function ActualizarUsuario(id As Integer, nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As String, observaciones As String) As Boolean
         Try
             Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
@@ -80,6 +112,11 @@
     End Function
 
 
+    ''' <summary>
+    ''' Elimina a un usuario en la base de datos
+    ''' </summary>
+    ''' <param name="id">Identificador del usuario</param>
+    ''' <returns>Valor booleano</returns>
     Public Function EliminarUsuario(id As Integer) As Boolean
         Dim eliminar As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
 
@@ -97,13 +134,13 @@
     End Function
 
     Public Function ContarUsuarios() As Integer
-        Dim total As GatewayUsuario
+        Dim usuarios As GatewayUsuario
         Try
-            total = New GatewayUsuario(My.Settings.Conexion)
+            usuarios = New GatewayUsuario(My.Settings.Conexion)
 
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
         End Try
-        Return total.Contar()
+        Return usuarios.Contar()
     End Function
 End Module

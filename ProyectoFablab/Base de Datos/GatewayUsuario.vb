@@ -10,9 +10,7 @@ Public Class GatewayUsuario
         comando.Connection = Me.conexion
     End Sub
 
-    '******************************************************************************
-    'INSERTAR, ELIMINAR, ACTUALIZAR Y CONSULTAR
-    '******************************************************************************
+
     ''' <summary>
     ''' Registra un usuario.
     ''' </summary>
@@ -183,6 +181,8 @@ Public Class GatewayUsuario
         Return resultado
     End Function
 
+
+
     ''' <summary>
     ''' Cuenta el número total de usuarios.
     ''' </summary>
@@ -197,59 +197,6 @@ Public Class GatewayUsuario
             resultado = DirectCast(comando.ExecuteScalar(), Integer)
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
-            End If
-        End Try
-        Return resultado
-    End Function
-
-    ''' <summary>
-    ''' Selecciona los usuarios con el mismo nombre pasado como parámetro.
-    ''' </summary>
-    ''' <param name="nombre">Nombre del usuario.</param>
-    ''' <returns>Regresa un objeto DataTable con los datos del usuario. </returns>
-    Public Function SeleccionarNombre(nombre As String) As DataTable
-        Dim consulta As String
-        Dim resultado As New DataTable
-        Dim lectura As SqlDataReader
-        DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
-        consulta = String.Format("SELECT * FROM usuarios WHERE nombre='{0}' AND apellido={}", nombre)
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            lectura = comando.ExecuteReader()
-            resultado.Load(lectura)
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
-            End If
-        End Try
-        Return resultado
-    End Function
-
-
-    ''' <summary>
-    ''' Selecciona un usuario mediante el identificador.
-    ''' </summary>
-    ''' <param name="id">Identificador del usuario</param>
-    ''' <returns>Retorna un objeto datable con los datos del usuario.</returns>
-    Public Function SeleccionarId(id As Integer) As DataTable
-        Dim consulta As String
-        Dim resultado As New DataTable
-        Dim lectura As SqlDataReader
-        DatoNoValido(id, 0, "El campo id no puede tener valor 0,")
-        consulta = "SELECT * FROM usuarios WHERE id=" & id
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            lectura = comando.ExecuteReader()
-            resultado.Load(lectura)
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()

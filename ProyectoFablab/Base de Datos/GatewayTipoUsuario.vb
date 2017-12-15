@@ -40,60 +40,6 @@ Public Class GatewayTipoUsuario
         Return filasAfectadas
     End Function
 
-    ''' <summary>
-    ''' Modifica un registro del tipo de usuario a través del identificador.
-    ''' </summary>
-    ''' <param name="id">Identificador del usuario.</param>
-    ''' <param name="tipo">El tipo de usuario para modificar.</param>
-    ''' <returns>Regresa el número de filas afectadas.</returns>
-    Public Function Actualizar(id As Integer, tipo As String) As Integer
-        Dim consulta As String
-        Dim filasAfectadas As Integer
-
-        DatoNoValido(id, 0, "El campo id no puede tener valor 0.")
-        DatoNoValido(tipo.Trim(), "", "El campo tipo no puede estar vacío.")
-
-        comando.Parameters.Add("@tipo", SqlDbType.VarChar)
-        comando.Parameters("@tipo").Value = tipo
-        consulta = "UPDATE TiposUsuario SET tipo=@tipo WHERE id=" & id
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion Is Nothing) Then
-                comando.Parameters.Clear()
-                conexion.Close()
-            End If
-        End Try
-        Return filasAfectadas
-    End Function
-
-    ''' <summary>
-    ''' Elimina un tipo de usuario mediante el identificador.
-    ''' </summary>
-    ''' <param name="id">Identificador</param>
-    ''' <returns>Regresa el número de filas afectadas.</returns>
-    Function Eliminar(id As Integer) As Integer
-
-        Dim consulta As String
-        Dim filasAfectadas As Integer
-        DatoNoValido(id, 0, "El campo id no puede tener valor 0")
-
-        consulta = "DELETE FROM tiposUsuario WHERE id=" & id
-
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            filasAfectadas = comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        End Try
-        Return filasAfectadas
-    End Function
-
 
     ''' <summary>
     ''' Selecciona todos los tipos de usuarios.
@@ -146,6 +92,12 @@ Public Class GatewayTipoUsuario
         Return id
     End Function
 
+
+    ''' <summary>
+    ''' Selecciona un tipo de usuario en el registro.
+    ''' </summary>
+    ''' <param name="id">Identificador del usuario</param>
+    ''' <returns>Tipo de usuario.</returns>
     Public Function SeleccionarTipo(id As Integer) As String
 
         Dim consulta As String
