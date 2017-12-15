@@ -14,13 +14,17 @@ Public Class Form3
     Private Sub Cancelar_Click(sender As Object, e As EventArgs) Handles CancelarButton.Click
         Me.Close()
     End Sub
-    Private Sub Examinar_Click(sender As Object, e As EventArgs) Handles ExaminarButton.Click
+    Private Async Sub Examinar_Click(sender As Object, e As EventArgs) Handles ExaminarButton.Click
         Dim seleccionarImagen As New OpenFileDialog()
         Dim rutaImagen As String
+        Dim bytes As Byte()
+        Dim memory As MemoryStream
         seleccionarImagen.Filter = "Imágenes (*.jpg)|*.jpg |Imágenes(*.png)|*.png|Todas las imágenes(*.*)|*.*"
-
+        VentanaPrincipal.BarraProgressBar.Visible = True
         If seleccionarImagen.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             rutaImagen = seleccionarImagen.FileName
+            bytes = Await ConseguirThumbnail(rutaImagen)
+            memory = New MemoryStream(bytes)
             Dim picturebox As New PictureBox()
             picturebox.Size = New Size(150, 120)
             picturebox.Image = Image.FromFile(rutaImagen)
@@ -29,6 +33,7 @@ Public Class Form3
             ImagenesFlowLayoutPanel.Controls.Add(picturebox)
             GuardarImagen(id, picturebox)
         End If
+        VentanaPrincipal.BarraProgressBar.Visible = False
     End Sub
     Private Async Sub GuardarImagen(identificador As Integer, picture As PictureBox)
         Dim thumbnail As Byte()
