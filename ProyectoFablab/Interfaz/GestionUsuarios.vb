@@ -149,6 +149,7 @@ Public Class GestionUsuarios
             If GUDataGridView.SelectedRows.Count = 1 Then
                 Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
                 MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Actualizar = True
             Else
                 MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If

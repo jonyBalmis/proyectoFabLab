@@ -82,17 +82,32 @@ Public Class GatewayUsuario
     ''' <param name="id">Identificador del usuario.</param>
     ''' <returns>Regresa el número de filas afectadas</returns>
     Public Function Eliminar(id As Integer) As Integer
-        Dim consulta As String
+        Dim consulta1 As String
+        Dim consulta2 As String
+        Dim consultarTabla As String
         Dim filasAfectadas As Integer
-        consulta = String.Format("DELETE FROM Usuarios LEFT JOIN Reservas ON Usuarios.id=Reservas.usuario WHERE id={0}", id)
-        'consulta = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
+        Dim reservas As Integer
+        consulta1 = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
+        consulta2 = String.Format("DELETE FROM Reservas WHERE usuario={0}", id)
+
+        consultarTabla = String.Format("SELECT COUNT(*) FROM Reservas WHERE id={0}", id)
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede estar vacío.")
         End If
         Try
             conexion.Open()
-            comando.CommandText = consulta
-            filasAfectadas = comando.ExecuteNonQuery()
+            comando.CommandText = consultarTabla
+            reservas = DirectCast(comando.ExecuteScalar(), Integer)
+            If reservas > 0 Then
+                comando.CommandText = consulta2
+                comando.ExecuteNonQuery()
+                comando.CommandText = consulta1
+                filasAfectadas = comando.ExecuteNonQuery()
+            Else
+                comando.CommandText = consulta1
+                filasAfectadas = comando.ExecuteNonQuery()
+            End If
+
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
         Finally

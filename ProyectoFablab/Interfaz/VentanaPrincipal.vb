@@ -63,4 +63,14 @@
     Private Sub MosaicoVerticalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MosaicoVerticalToolStripMenuItem.Click
         Me.LayoutMdi(MdiLayout.TileVertical)
     End Sub
+
+    Private Sub MinizarVentanasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinizarVentanasToolStripMenuItem.Click
+
+        For Each ventana As Form In Me.MdiChildren
+
+            ventana.WindowState = FormWindowState.Minimized
+
+        Next
+
+    End Sub
 End Class
