@@ -158,7 +158,6 @@ Public Class GestionUsuarios
                     respuesta = MessageBox.Show("¿Estas seguro que deseas eliminar a este usuario?", "Eliminar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
                     If respuesta = DialogResult.Yes Then
                         Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
-                        MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Actualizar = True
                     End If
 

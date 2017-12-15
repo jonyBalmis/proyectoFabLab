@@ -258,7 +258,7 @@ Partial Class VentanaPrincipal
         'BarraProgressBar
         '
         Me.BarraProgressBar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BarraProgressBar.Location = New System.Drawing.Point(367, 265)
+        Me.BarraProgressBar.Location = New System.Drawing.Point(183, 264)
         Me.BarraProgressBar.Name = "BarraProgressBar"
         Me.BarraProgressBar.Size = New System.Drawing.Size(100, 23)
         Me.BarraProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee

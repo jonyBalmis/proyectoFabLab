@@ -82,6 +82,7 @@ Partial Class Form3
         Me.TableLayoutPanel1.Controls.Add(Me.Panel8, 2, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
@@ -89,7 +90,7 @@ Partial Class Form3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(874, 524)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(657, 432)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Panel5
@@ -98,16 +99,18 @@ Partial Class Form3
         Me.Panel5.Controls.Add(Me.NMComboBox)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(294, 55)
+        Me.Panel5.Location = New System.Drawing.Point(221, 45)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(285, 46)
+        Me.Panel5.Size = New System.Drawing.Size(215, 39)
         Me.Panel5.TabIndex = 4
         '
         'AnadirButton
         '
-        Me.AnadirButton.Location = New System.Drawing.Point(229, 10)
+        Me.AnadirButton.Location = New System.Drawing.Point(172, 8)
+        Me.AnadirButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.AnadirButton.Name = "AnadirButton"
-        Me.AnadirButton.Size = New System.Drawing.Size(27, 23)
+        Me.AnadirButton.Size = New System.Drawing.Size(20, 19)
         Me.AnadirButton.TabIndex = 4
         Me.AnadirButton.Text = "+"
         Me.AnadirButton.UseVisualStyleBackColor = True
@@ -115,17 +118,19 @@ Partial Class Form3
         'NMComboBox
         '
         Me.NMComboBox.FormattingEnabled = True
-        Me.NMComboBox.Location = New System.Drawing.Point(92, 10)
+        Me.NMComboBox.Location = New System.Drawing.Point(69, 8)
+        Me.NMComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NMComboBox.Name = "NMComboBox"
-        Me.NMComboBox.Size = New System.Drawing.Size(121, 24)
+        Me.NMComboBox.Size = New System.Drawing.Size(92, 21)
         Me.NMComboBox.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 13)
+        Me.Label4.Location = New System.Drawing.Point(2, 11)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 17)
+        Me.Label4.Size = New System.Drawing.Size(28, 13)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Tipo"
         '
@@ -134,24 +139,27 @@ Partial Class Form3
         Me.Panel4.Controls.Add(Me.TelefonoTextBox)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 55)
+        Me.Panel4.Location = New System.Drawing.Point(2, 45)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(285, 46)
+        Me.Panel4.Size = New System.Drawing.Size(215, 39)
         Me.Panel4.TabIndex = 3
         '
         'TelefonoTextBox
         '
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(110, 10)
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(82, 8)
+        Me.TelefonoTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
-        Me.TelefonoTextBox.Size = New System.Drawing.Size(134, 22)
+        Me.TelefonoTextBox.Size = New System.Drawing.Size(102, 20)
         Me.TelefonoTextBox.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 13)
+        Me.Label2.Location = New System.Drawing.Point(7, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 17)
+        Me.Label2.Size = New System.Drawing.Size(73, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Telefono SAT"
         '
@@ -160,25 +168,28 @@ Partial Class Form3
         Me.Panel3.Controls.Add(Me.CompraDateTimePicker)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(585, 3)
+        Me.Panel3.Location = New System.Drawing.Point(440, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
         Me.TableLayoutPanel1.SetRowSpan(Me.Panel3, 2)
-        Me.Panel3.Size = New System.Drawing.Size(286, 98)
+        Me.Panel3.Size = New System.Drawing.Size(215, 82)
         Me.Panel3.TabIndex = 2
         '
         'CompraDateTimePicker
         '
-        Me.CompraDateTimePicker.Location = New System.Drawing.Point(6, 57)
+        Me.CompraDateTimePicker.Location = New System.Drawing.Point(4, 46)
+        Me.CompraDateTimePicker.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CompraDateTimePicker.Name = "CompraDateTimePicker"
-        Me.CompraDateTimePicker.Size = New System.Drawing.Size(274, 22)
+        Me.CompraDateTimePicker.Size = New System.Drawing.Size(206, 20)
         Me.CompraDateTimePicker.TabIndex = 5
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(74, 10)
+        Me.Label5.Location = New System.Drawing.Point(56, 8)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(118, 17)
+        Me.Label5.Size = New System.Drawing.Size(90, 13)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Fecha de compra"
         '
@@ -187,24 +198,27 @@ Partial Class Form3
         Me.Panel2.Controls.Add(Me.PrecioTextBox)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(294, 3)
+        Me.Panel2.Location = New System.Drawing.Point(221, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(285, 46)
+        Me.Panel2.Size = New System.Drawing.Size(215, 39)
         Me.Panel2.TabIndex = 1
         '
         'PrecioTextBox
         '
-        Me.PrecioTextBox.Location = New System.Drawing.Point(92, 7)
+        Me.PrecioTextBox.Location = New System.Drawing.Point(69, 6)
+        Me.PrecioTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PrecioTextBox.Name = "PrecioTextBox"
-        Me.PrecioTextBox.Size = New System.Drawing.Size(121, 22)
+        Me.PrecioTextBox.Size = New System.Drawing.Size(92, 20)
         Me.PrecioTextBox.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 10)
+        Me.Label3.Location = New System.Drawing.Point(2, 8)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 17)
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Precio/Hora"
         '
@@ -213,24 +227,27 @@ Partial Class Form3
         Me.Panel1.Controls.Add(Me.ModeloTextBox)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Location = New System.Drawing.Point(2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(285, 46)
+        Me.Panel1.Size = New System.Drawing.Size(215, 39)
         Me.Panel1.TabIndex = 0
         '
         'ModeloTextBox
         '
-        Me.ModeloTextBox.Location = New System.Drawing.Point(110, 7)
+        Me.ModeloTextBox.Location = New System.Drawing.Point(82, 6)
+        Me.ModeloTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ModeloTextBox.Name = "ModeloTextBox"
-        Me.ModeloTextBox.Size = New System.Drawing.Size(134, 22)
+        Me.ModeloTextBox.Size = New System.Drawing.Size(102, 20)
         Me.ModeloTextBox.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 10)
+        Me.Label1.Location = New System.Drawing.Point(7, 8)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 17)
+        Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Modelo"
         '
@@ -242,9 +259,10 @@ Partial Class Form3
         Me.Panel6.Controls.Add(Me.Label7)
         Me.Panel6.Controls.Add(Me.Label6)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(3, 107)
+        Me.Panel6.Location = New System.Drawing.Point(2, 88)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(868, 177)
+        Me.Panel6.Size = New System.Drawing.Size(653, 147)
         Me.Panel6.TabIndex = 5
         '
         'CaracteristicasRichTextBox
@@ -252,9 +270,10 @@ Partial Class Form3
         Me.CaracteristicasRichTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CaracteristicasRichTextBox.Location = New System.Drawing.Point(427, 36)
+        Me.CaracteristicasRichTextBox.Location = New System.Drawing.Point(320, 29)
+        Me.CaracteristicasRichTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CaracteristicasRichTextBox.Name = "CaracteristicasRichTextBox"
-        Me.CaracteristicasRichTextBox.Size = New System.Drawing.Size(408, 138)
+        Me.CaracteristicasRichTextBox.Size = New System.Drawing.Size(309, 116)
         Me.CaracteristicasRichTextBox.TabIndex = 7
         Me.CaracteristicasRichTextBox.Text = ""
         '
@@ -262,27 +281,30 @@ Partial Class Form3
         '
         Me.DescripcionRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.DescripcionRichTextBox.Location = New System.Drawing.Point(9, 36)
+        Me.DescripcionRichTextBox.Location = New System.Drawing.Point(7, 29)
+        Me.DescripcionRichTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DescripcionRichTextBox.Name = "DescripcionRichTextBox"
-        Me.DescripcionRichTextBox.Size = New System.Drawing.Size(366, 138)
+        Me.DescripcionRichTextBox.Size = New System.Drawing.Size(276, 116)
         Me.DescripcionRichTextBox.TabIndex = 6
         Me.DescripcionRichTextBox.Text = ""
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(424, 16)
+        Me.Label7.Location = New System.Drawing.Point(318, 13)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(150, 17)
+        Me.Label7.Size = New System.Drawing.Size(115, 13)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Caraterísticas técnicas"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 16)
+        Me.Label6.Location = New System.Drawing.Point(7, 13)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 17)
+        Me.Label6.Size = New System.Drawing.Size(63, 13)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Descripción"
         '
@@ -293,16 +315,18 @@ Partial Class Form3
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Controls.Add(Me.ImagenesFlowLayoutPanel)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(3, 290)
+        Me.Panel7.Location = New System.Drawing.Point(2, 239)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(868, 177)
+        Me.Panel7.Size = New System.Drawing.Size(653, 147)
         Me.Panel7.TabIndex = 6
         '
         'ExaminarButton
         '
-        Me.ExaminarButton.Location = New System.Drawing.Point(110, 11)
+        Me.ExaminarButton.Location = New System.Drawing.Point(82, 9)
+        Me.ExaminarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ExaminarButton.Name = "ExaminarButton"
-        Me.ExaminarButton.Size = New System.Drawing.Size(87, 23)
+        Me.ExaminarButton.Size = New System.Drawing.Size(65, 19)
         Me.ExaminarButton.TabIndex = 8
         Me.ExaminarButton.Text = "Examinar"
         Me.ExaminarButton.UseVisualStyleBackColor = True
@@ -310,9 +334,10 @@ Partial Class Form3
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 14)
+        Me.Label8.Location = New System.Drawing.Point(7, 11)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(69, 17)
+        Me.Label8.Size = New System.Drawing.Size(53, 13)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Imágenes"
         '
@@ -321,9 +346,10 @@ Partial Class Form3
         Me.ImagenesFlowLayoutPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ImagenesFlowLayoutPanel.AutoScroll = True
-        Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(3, 44)
+        Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(2, 36)
+        Me.ImagenesFlowLayoutPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ImagenesFlowLayoutPanel.Name = "ImagenesFlowLayoutPanel"
-        Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(851, 130)
+        Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(638, 109)
         Me.ImagenesFlowLayoutPanel.TabIndex = 9
         '
         'Panel8
@@ -331,25 +357,28 @@ Partial Class Form3
         Me.Panel8.Controls.Add(Me.CancelarButton)
         Me.Panel8.Controls.Add(Me.AceptarButton)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel8.Location = New System.Drawing.Point(585, 473)
+        Me.Panel8.Location = New System.Drawing.Point(440, 390)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(286, 48)
+        Me.Panel8.Size = New System.Drawing.Size(215, 40)
         Me.Panel8.TabIndex = 7
         '
         'CancelarButton
         '
-        Me.CancelarButton.Location = New System.Drawing.Point(145, 10)
+        Me.CancelarButton.Location = New System.Drawing.Point(109, 8)
+        Me.CancelarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CancelarButton.Name = "CancelarButton"
-        Me.CancelarButton.Size = New System.Drawing.Size(75, 26)
+        Me.CancelarButton.Size = New System.Drawing.Size(60, 21)
         Me.CancelarButton.TabIndex = 11
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
         'AceptarButton
         '
-        Me.AceptarButton.Location = New System.Drawing.Point(63, 10)
+        Me.AceptarButton.Location = New System.Drawing.Point(47, 8)
+        Me.AceptarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.AceptarButton.Name = "AceptarButton"
-        Me.AceptarButton.Size = New System.Drawing.Size(75, 26)
+        Me.AceptarButton.Size = New System.Drawing.Size(56, 21)
         Me.AceptarButton.TabIndex = 10
         Me.AceptarButton.Text = "Aceptar"
         Me.AceptarButton.UseVisualStyleBackColor = True
@@ -360,12 +389,13 @@ Partial Class Form3
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 524)
+        Me.ClientSize = New System.Drawing.Size(657, 432)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(892, 571)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MinimumSize = New System.Drawing.Size(673, 471)
         Me.Name = "Form3"
         Me.Text = "FabLab-NuevaMaquina "
         Me.TableLayoutPanel1.ResumeLayout(False)

@@ -51,13 +51,13 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(895, 537)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(671, 436)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Panel1
@@ -66,37 +66,36 @@ Partial Class GestionMaquinas
         Me.Panel1.Controls.Add(Me.GMBuscarTextBox)
         Me.Panel1.Controls.Add(Me.NuevaButton)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 2)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Location = New System.Drawing.Point(2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(889, 76)
+        Me.Panel1.Size = New System.Drawing.Size(667, 61)
         Me.Panel1.TabIndex = 0
         '
         'BuscarPictureBox
         '
         Me.BuscarPictureBox.Image = Global.ProyectoFablab.My.Resources.Resources.search
-        Me.BuscarPictureBox.Location = New System.Drawing.Point(287, 22)
-        Me.BuscarPictureBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.BuscarPictureBox.Location = New System.Drawing.Point(215, 18)
         Me.BuscarPictureBox.Name = "BuscarPictureBox"
-        Me.BuscarPictureBox.Size = New System.Drawing.Size(40, 25)
+        Me.BuscarPictureBox.Size = New System.Drawing.Size(30, 20)
         Me.BuscarPictureBox.TabIndex = 2
         Me.BuscarPictureBox.TabStop = False
         '
         'GMBuscarTextBox
         '
-        Me.GMBuscarTextBox.Location = New System.Drawing.Point(12, 22)
-        Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GMBuscarTextBox.Location = New System.Drawing.Point(9, 18)
+        Me.GMBuscarTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GMBuscarTextBox.Name = "GMBuscarTextBox"
-        Me.GMBuscarTextBox.Size = New System.Drawing.Size(267, 22)
+        Me.GMBuscarTextBox.Size = New System.Drawing.Size(201, 20)
         Me.GMBuscarTextBox.TabIndex = 0
         '
         'NuevaButton
         '
         Me.NuevaButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NuevaButton.Location = New System.Drawing.Point(721, 17)
-        Me.NuevaButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.NuevaButton.Location = New System.Drawing.Point(541, 14)
+        Me.NuevaButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NuevaButton.Name = "NuevaButton"
-        Me.NuevaButton.Size = New System.Drawing.Size(119, 32)
+        Me.NuevaButton.Size = New System.Drawing.Size(89, 26)
         Me.NuevaButton.TabIndex = 1
         Me.NuevaButton.Text = "Nueva máquina"
         Me.NuevaButton.UseVisualStyleBackColor = True
@@ -105,10 +104,10 @@ Partial Class GestionMaquinas
         '
         Me.Panel2.Controls.Add(Me.GMTablaDataGridView)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(3, 82)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Location = New System.Drawing.Point(2, 67)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(889, 371)
+        Me.Panel2.Size = New System.Drawing.Size(667, 301)
         Me.Panel2.TabIndex = 1
         '
         'GMTablaDataGridView
@@ -116,10 +115,10 @@ Partial Class GestionMaquinas
         Me.GMTablaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GMTablaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GMTablaDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.GMTablaDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GMTablaDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GMTablaDataGridView.Name = "GMTablaDataGridView"
         Me.GMTablaDataGridView.RowTemplate.Height = 24
-        Me.GMTablaDataGridView.Size = New System.Drawing.Size(889, 371)
+        Me.GMTablaDataGridView.Size = New System.Drawing.Size(667, 301)
         Me.GMTablaDataGridView.TabIndex = 2
         '
         'Panel3
@@ -128,30 +127,30 @@ Partial Class GestionMaquinas
         Me.Panel3.Controls.Add(Me.EditarButton)
         Me.Panel3.Controls.Add(Me.ConsultarButton)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(3, 457)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel3.Location = New System.Drawing.Point(2, 372)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(889, 78)
+        Me.Panel3.Size = New System.Drawing.Size(667, 62)
         Me.Panel3.TabIndex = 2
         '
         'EliminarButton
         '
         Me.EliminarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EliminarButton.Location = New System.Drawing.Point(767, 32)
-        Me.EliminarButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.EliminarButton.Location = New System.Drawing.Point(575, 25)
+        Me.EliminarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.EliminarButton.Name = "EliminarButton"
-        Me.EliminarButton.Size = New System.Drawing.Size(96, 27)
+        Me.EliminarButton.Size = New System.Drawing.Size(72, 22)
         Me.EliminarButton.TabIndex = 5
-        Me.EliminarButton.Text = "Elimiar"
+        Me.EliminarButton.Text = "Eliminar"
         Me.EliminarButton.UseVisualStyleBackColor = True
         '
         'EditarButton
         '
         Me.EditarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EditarButton.Location = New System.Drawing.Point(664, 32)
-        Me.EditarButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.EditarButton.Location = New System.Drawing.Point(498, 25)
+        Me.EditarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.EditarButton.Name = "EditarButton"
-        Me.EditarButton.Size = New System.Drawing.Size(96, 27)
+        Me.EditarButton.Size = New System.Drawing.Size(72, 22)
         Me.EditarButton.TabIndex = 4
         Me.EditarButton.Text = "Editar"
         Me.EditarButton.UseVisualStyleBackColor = True
@@ -159,23 +158,23 @@ Partial Class GestionMaquinas
         'ConsultarButton
         '
         Me.ConsultarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ConsultarButton.Location = New System.Drawing.Point(563, 32)
-        Me.ConsultarButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ConsultarButton.Location = New System.Drawing.Point(422, 25)
+        Me.ConsultarButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ConsultarButton.Name = "ConsultarButton"
-        Me.ConsultarButton.Size = New System.Drawing.Size(96, 27)
+        Me.ConsultarButton.Size = New System.Drawing.Size(72, 22)
         Me.ConsultarButton.TabIndex = 3
         Me.ConsultarButton.Text = "Consultar"
         Me.ConsultarButton.UseVisualStyleBackColor = True
         '
         'GestionMaquinas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(895, 537)
+        Me.ClientSize = New System.Drawing.Size(671, 436)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MinimumSize = New System.Drawing.Size(534, 390)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MinimumSize = New System.Drawing.Size(404, 324)
         Me.Name = "GestionMaquinas"
         Me.Text = "FabLab-Gestion de Maquinas"
         Me.TableLayoutPanel1.ResumeLayout(False)
