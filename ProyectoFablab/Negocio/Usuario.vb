@@ -96,8 +96,13 @@
     End Function
 
     Public Function ContarUsuarios() As Integer
-        Dim total As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+        Dim total As GatewayUsuario
+        Try
+            total = New GatewayUsuario(My.Settings.Conexion)
 
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
         Return total.Contar()
     End Function
 End Module

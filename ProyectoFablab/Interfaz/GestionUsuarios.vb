@@ -147,8 +147,14 @@ Public Class GestionUsuarios
     Private Sub GUEliminarButton_Click(sender As Object, e As EventArgs) Handles GUEliminarButton.Click
         Try
             If GUDataGridView.SelectedRows.Count = 1 Then
-                Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
-                MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Try
+                    Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
+                    MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Catch ex As ArgumentException
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
                 Actualizar = True
             Else
                 MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

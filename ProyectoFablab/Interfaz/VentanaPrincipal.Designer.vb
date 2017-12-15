@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class VentanaPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class VentanaPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentanaPrincipal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -50,6 +50,7 @@ Partial Class VentanaPrincipal
         Me.InfoUToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.InfoMToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -60,6 +61,7 @@ Partial Class VentanaPrincipal
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.MaquinasToolStripMenuItem, Me.VentanasToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.MdiWindowListItem = Me.VentanasToolStripMenuItem
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(511, 24)
         Me.MenuStrip1.TabIndex = 0
@@ -105,7 +107,7 @@ Partial Class VentanaPrincipal
         '
         'VentanasToolStripMenuItem
         '
-        Me.VentanasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrganizadorDeVentanasToolStripMenuItem, Me.MinizarVentanasToolStripMenuItem})
+        Me.VentanasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrganizadorDeVentanasToolStripMenuItem, Me.MinizarVentanasToolStripMenuItem, Me.ToolStripSeparator3})
         Me.VentanasToolStripMenuItem.Name = "VentanasToolStripMenuItem"
         Me.VentanasToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.VentanasToolStripMenuItem.Text = "&Ventanas"
@@ -247,6 +249,11 @@ Partial Class VentanaPrincipal
         Me.InfoMToolStripStatusLabel.Size = New System.Drawing.Size(71, 17)
         Me.InfoMToolStripStatusLabel.Text = "Máquinas: 0"
         '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(208, 6)
+        '
         'VentanaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,5 +306,5 @@ Partial Class VentanaPrincipal
     Friend WithEvents ToolStripButton5 As ToolStripButton
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents InfoMToolStripStatusLabel As ToolStripStatusLabel
-
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
 End Class
