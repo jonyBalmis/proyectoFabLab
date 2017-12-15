@@ -137,9 +137,6 @@ Public Class GestionUsuarios
                 consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
                 consulta.NUAceptarButton.Text = "Guardar"
                 consulta.Show()
-
-                'ARREGLAR MODIFICACION DE IMAGEN
-
             Else
                 MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
@@ -155,17 +152,23 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub GUEliminarButton_Click(sender As Object, e As EventArgs) Handles GUEliminarButton.Click
+        Dim respuesta As DialogResult
         Try
             If GUDataGridView.SelectedRows.Count = 1 Then
                 Try
-                    Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
-                    MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    respuesta = MessageBox.Show("¿Estas seguro que deseas eliminar a este usuario?", "Eliminar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+                    If respuesta = DialogResult.Yes Then
+                        Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
+                        MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Actualizar = True
+                    End If
+
                 Catch ex As ArgumentException
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Catch ex As Exception
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
-                Actualizar = True
+
             Else
                 MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If

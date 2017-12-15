@@ -44,7 +44,7 @@ Public Class NuevoUsuario
     Private Sub NuevoUsuario_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim respuesta As DialogResult
 
-        respuesta = MessageBox.Show("¿Estas seguro que deseas salir?", "Nuevo usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+        respuesta = MessageBox.Show("¿Estas seguro que deseas salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
         If Not respuesta = DialogResult.Yes Then
             e.Cancel = True
         End If
