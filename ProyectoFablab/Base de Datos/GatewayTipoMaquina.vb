@@ -110,7 +110,7 @@ Public Class GatewayTipoMaquinas
         Return filas
     End Function
     ''' <summary>
-    ''' Muestra el identificador del tipo de usuario.
+    ''' Muestra el identificador del tipo de maquina.
     ''' </summary>
     ''' <param name="tipo">Tipo de Maquina.</param>
     ''' <returns>Identificador.</returns>
@@ -163,4 +163,5 @@ Public Class GatewayTipoMaquinas
         'Devolvemos el resultado
         Return resultado
     End Function
+
 End Class

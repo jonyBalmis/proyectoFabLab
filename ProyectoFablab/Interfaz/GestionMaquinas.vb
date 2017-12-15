@@ -29,4 +29,7 @@
         GMTablaDataGridView.DataSource = source
     End Sub
 
+    Private Sub NuevaButton_Click(sender As Object, e As EventArgs) Handles NuevaButton.Click
+
+    End Sub
 End Class

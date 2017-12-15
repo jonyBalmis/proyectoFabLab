@@ -78,7 +78,7 @@ Public Class GatewayMaquinas
     ''' <param name="descripcion">Descripcion de la maquina</param>
     ''' <param name="caracteristicas">Caracteristicas de la maquina</param>
     ''' <returns>Número de filas afectadas por la consulta</returns>
-    Public Function Insertar(id As Integer, modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
+    Public Function Actualizar(id As Integer, modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
         Dim consulta As String = String.Format("UPDATE Maquinas SET modelo='{0}',precio_hora='{1}',fecha_compra='{2}',telefono_sat='{3}',tipo='{4}',descripcion='{5}',caracteristicas='{6}' WHERE id='{7}'", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas, id)
@@ -123,7 +123,7 @@ Public Class GatewayMaquinas
     ''' <param name="id">Identificador del registro</param>
     ''' <returns>Número de filas afectadas por la consulta</returns>
     Public Function Eliminar(id As Integer) As Integer
-
+        Dim Reservas As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de eliminación
         Dim consulta As String = String.Format("DELETE FROM Telefonos WHERE id={0})", id)
@@ -135,9 +135,17 @@ Public Class GatewayMaquinas
 
         'Ejecutamos la consulta
         Try
+
             conexion.Open()
-            comando.CommandText = consulta
-            filas = comando.ExecuteNonQuery()
+            comando.CommandText = "SELECT COUNT(Maq.Reserva) FROM MaquinasReserva Maq WHERE  Maq.Maquina = 1"
+            Reservas = DirectCast(comando.ExecuteScalar(), Integer)
+            If Reservas > 0 Then
+                MessageBox.Show("No se puede eliminar una maquina que tenga reservas ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                comando.CommandText = consulta
+                filas = comando.ExecuteNonQuery()
+            End If
+
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
         Finally
@@ -251,6 +259,47 @@ Public Class GatewayMaquinas
 
         'Devolvemos el resultado
         Return resultado
+
+    End Function
+    ''' <summary>
+    ''' Metodo para obtener el numero de maquinas
+    ''' </summary>
+    ''' <returns>Numero de maquinas en la base de datos</returns>
+    Public Function NumeroMaquinas() As Integer
+        Dim consulta As String = String.Format("SELECT COUNT(*) FROM Maquinas")
+        Dim numero As Integer
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            numero = CInt(comando.ExecuteScalar())
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+        Return numero
+    End Function
+    ''' <summary>
+    ''' Metodo para obtener el ultimo id de la maquina
+    ''' </summary>
+    ''' <returns>Id de la ultima maquina</returns>
+    Public Function SeleccionarUltimoIdMaquina() As Integer
+        Dim consulta As String = String.Format("SELECT MAX(Id) FROM Maquinas")
+        Dim ultimo As Integer
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            ultimo = Integer.Parse(comando.ExecuteScalar().ToString())
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+        Return ultimo
 
     End Function
 End Class
