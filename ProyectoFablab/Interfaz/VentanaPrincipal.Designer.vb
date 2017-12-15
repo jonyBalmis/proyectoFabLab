@@ -47,7 +47,9 @@ Partial Class VentanaPrincipal
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.InfoUToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.InfoMToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -149,7 +151,7 @@ Partial Class VentanaPrincipal
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AcercaDeToolStripMenuItem.Text = "&Acerca de"
         '
         'ToolStrip1
@@ -220,18 +222,30 @@ Partial Class VentanaPrincipal
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoUToolStripStatusLabel, Me.ToolStripStatusLabel1, Me.InfoMToolStripStatusLabel})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 265)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(511, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
+        'InfoUToolStripStatusLabel
+        '
+        Me.InfoUToolStripStatusLabel.Name = "InfoUToolStripStatusLabel"
+        Me.InfoUToolStripStatusLabel.Size = New System.Drawing.Size(67, 17)
+        Me.InfoUToolStripStatusLabel.Text = "Usuarios: 0 "
+        '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
-        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(12, 17)
+        Me.ToolStripStatusLabel1.Text = "-"
+        '
+        'InfoMToolStripStatusLabel
+        '
+        Me.InfoMToolStripStatusLabel.Name = "InfoMToolStripStatusLabel"
+        Me.InfoMToolStripStatusLabel.Size = New System.Drawing.Size(71, 17)
+        Me.InfoMToolStripStatusLabel.Text = "Máquinas: 0"
         '
         'VentanaPrincipal
         '
@@ -279,10 +293,11 @@ Partial Class VentanaPrincipal
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents InfoUToolStripStatusLabel As ToolStripStatusLabel
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripButton5 As ToolStripButton
-
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents InfoMToolStripStatusLabel As ToolStripStatusLabel
 
 End Class
