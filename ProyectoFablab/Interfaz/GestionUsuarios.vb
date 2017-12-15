@@ -20,11 +20,21 @@ Public Class GestionUsuarios
         usuarios = Usuario.SeleccionarUsuarios
         GUDataGridView.DataSource = usuarios
         GUDataGridView.Columns(0).Visible = False
+        GUDataGridView.Columns(3).Visible = False
+        GUDataGridView.Columns(4).Visible = False
+        GUDataGridView.Columns(5).Visible = False
+        GUDataGridView.Columns(6).Visible = False
         GUDataGridView.Columns(8).Visible = False
         GUDataGridView.Columns(10).Visible = False
         GUDataGridView.Columns(11).Visible = False
-        GUDataGridView.Columns(12).DisplayIndex = 8
+        GUDataGridView.Columns(12).DisplayIndex = 3
+        GUDataGridView.Columns(1).HeaderText = "Nombre"
+        GUDataGridView.Columns(2).HeaderText = "Apellidos"
+        GUDataGridView.Columns(7).HeaderText = "Organización"
+        GUDataGridView.Columns(9).HeaderText = "Fecha de alta"
+        GUDataGridView.Columns(12).HeaderText = "Tipos de usuario"
         GUDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
     End Sub
 
     Public Property Actualizar() As Boolean
