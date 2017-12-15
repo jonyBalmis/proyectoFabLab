@@ -32,16 +32,17 @@
 
     Public Sub Insertar(nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As String, observaciones As String)
         Dim filasAfectadas As Integer
-        Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
-        Dim gatewayUsuario As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
-        Dim tipoId As Integer = gatewayTipo.SeleccionarId(tipo)
-        ContactoObligatorio(telefono, email)
-
         Try
+            Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
+            Dim gatewayUsuario As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+            Dim tipoId As Integer = gatewayTipo.SeleccionarId(tipo)
+            ContactoObligatorio(telefono, email)
             filasAfectadas = gatewayUsuario.Insertar(nombre, apellidos, fechaNac, telefono, email, direccion, organizacion, tipoId, observaciones)
 
         Catch ex As ArgumentException
             Throw New ArgumentException(ex.Message, ex)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
         End Try
 
     End Sub
@@ -60,5 +61,20 @@
     Public Function SeleccionarUsuarios() As DataTable
         Dim usuarios As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
         Return usuarios.SeleccionarTodos()
+    End Function
+
+    Public Function ActualizarUsuario(id As Integer, nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As String, observaciones As String) As Boolean
+        Try
+            Dim gatewayTipo As GatewayTipoUsuario = New GatewayTipoUsuario(My.Settings.Conexion)
+            Dim actualizar As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+            Dim tipoId As Integer = gatewayTipo.SeleccionarId(tipo)
+            ContactoObligatorio(telefono, email)
+            actualizar.Actualizar(id, nombre, apellidos, fechaNac, telefono, email, direccion, organizacion, tipoId, observaciones)
+        Catch ex As ArgumentException
+            Throw New ArgumentException(ex.Message, ex)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+        Return True
     End Function
 End Module

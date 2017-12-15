@@ -117,7 +117,7 @@ Public Class GatewayUsuario
     ''' <param name="tipo">Tipo de usuario.</param>
     ''' ''' <param name="observaciones">Dato adicional del usuario.</param>
     ''' <returns>Devuelve el número de filas afectadas.</returns>
-    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fechaNac As String, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
+    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fechaNac As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
         Dim consulta As String
         Dim filasAfectadas As Integer
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
@@ -131,7 +131,7 @@ Public Class GatewayUsuario
         comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
         comando.Parameters("@apellidos").Value = apellidos
         comando.Parameters.Add("@fechaNac", SqlDbType.Date)
-        comando.Parameters("@fechaNac").Value = DateTime.Parse(fechaNac)
+        comando.Parameters("@fechaNac").Value = fechaNac
         comando.Parameters.Add("@telefono", SqlDbType.VarChar)
         comando.Parameters("@telefono").Value = IIf(telefono.Trim().CompareTo("") = 0, DBNull.Value, telefono)
         comando.Parameters.Add("@correo", SqlDbType.VarChar)

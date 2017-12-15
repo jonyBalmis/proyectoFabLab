@@ -4,9 +4,14 @@ Public Class GestionUsuarios
     Dim resultado As New DataSet
     Dim usuarios As DataTable
     Dim nuevo As NuevoUsuario
+    Dim _actualizar As Boolean
 
 
     Private Sub GestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Actualizar = True
+    End Sub
+
+    Public Sub CargarDatos()
         Dim dataTable As DataTable = Usuario.SeleccionarUsuarios()
         Dim dataSet As New DataSet()
         dataSet.Tables.Add(dataTable)
@@ -22,6 +27,16 @@ Public Class GestionUsuarios
         GUDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 
+    Public Property Actualizar() As Boolean
+        Get
+            Return _actualizar
+        End Get
+        Set(value As Boolean)
+            If value Then
+                CargarDatos()
+            End If
+        End Set
+    End Property
     Private Sub GUBuscarTextBox_TextChanged(sender As Object, e As EventArgs) Handles GUBuscarTextBox.TextChanged
 
         Enlace.Filter = "nombre LIKE '" & GUBuscarTextBox.Text & "%'"
@@ -64,6 +79,8 @@ Public Class GestionUsuarios
             consulta.NUExaminarButton.Visible = False
             consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
             consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+            consulta.NUAceptarButton.Visible = False
+            consulta.NUCancelarButton.Text = "Salir"
             consulta.Show()
 
         Else
@@ -78,13 +95,52 @@ Public Class GestionUsuarios
     ''' <param name="id">Identificador del usuario</param>
     ''' <returns>Imagen del usuario.</returns>
     Private Function ObtenerImagen(id As String) As Image
-
         Dim directorio As System.IO.DirectoryInfo = New System.IO.DirectoryInfo(My.Settings.UsuariosImg)
-
-
         If directorio.GetFiles(id & ".png").Count() = 0 And directorio.GetFiles(id & ".jpg").Count() = 0 Then
             Return Image.FromFile(My.Settings.UsuariosImg & "0.png")
         End If
         Return Image.FromFile(My.Settings.UsuariosImg & id & ".png")
     End Function
+
+    Private Sub GUEditarButton_Click(sender As Object, e As EventArgs) Handles GUEditarButton.Click
+        Dim consulta As NuevoUsuario = New NuevoUsuario()
+        consulta.MdiParent = VentanaPrincipal
+
+        If GUDataGridView.SelectedRows.Count = 1 Then
+            consulta.id = DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer)
+            consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
+            consulta.NUApellidosTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(2).Value)
+            consulta.NUFechaDateTimePicker.Value = DirectCast(GUDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
+            consulta.NUTelefonoTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(4).Value)
+            consulta.NUEmailTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(5).Value)
+            consulta.NUDireccionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(6).Value)
+            consulta.NUOrganizacionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(7).Value)
+            consulta.NUObservacionesRichTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(10).Value)
+            consulta.ActualizarComboBox()
+            consulta.NUTipoComboBox.SelectedIndex = DirectCast(GUDataGridView.SelectedRows(0).Cells(11).Value, Integer) - 1
+            consulta.NUTipoComboBox.SelectedIndex = 0
+            consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
+            consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+            consulta.NUAceptarButton.Text = "Guardar"
+            consulta.Show()
+
+            'ARREGLAR MODIFICACION DE IMAGEN
+
+        Else
+            MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+
+    Private Sub GestionUsuarios_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        Actualizar = True
+    End Sub
+
+    Private Sub GUEliminarButton_Click(sender As Object, e As EventArgs) Handles GUEliminarButton.Click
+        If GUDataGridView.SelectedRows.Count = 1 Then
+
+
+        Else
+            MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
 End Class

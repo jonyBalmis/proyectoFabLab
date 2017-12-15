@@ -1,18 +1,27 @@
 ﻿Imports Microsoft.ProjectOxford.Vision
 Imports System.IO
 Public Class NuevoUsuario
-
+    Public Property id() As Integer
     Private imagenSeleccionada As Boolean
-    Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         imagenSeleccionada = False
     End Sub
 
     Private Sub NUAceptarButton_Click(sender As Object, e As EventArgs) Handles NUAceptarButton.Click
         Try
-            Usuario.Insertar(NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
-            GuardarImagen(Usuario.ObtenerUltimoId())
-            MessageBox.Show(NUNombreTextBox.Text & " ha sido registrado.", "Usuario registrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If NUAceptarButton.Text.Equals("Aceptar") Then
+                Usuario.Insertar(NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
+                Me.id = Usuario.ObtenerUltimoId()
+                GuardarImagen(Me.id)
+                MessageBox.Show(NUNombreTextBox.Text & " ha sido registrado.", "Usuario registrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ElseIf NUAceptarButton.Text.Equals("Guardar") Then
+                'La id se obtiene desde la instancia creada en GestionUsuarios botón Editar
+                Usuario.ActualizarUsuario(Me.id, NUNombreTextBox.Text, NUApellidosTextBox.Text, NUFechaDateTimePicker.Value.Date, NUTelefonoTextBox.Text, NUEmailTextBox.Text, NUDireccionTextBox.Text, NUOrganizacionTextBox.Text, NUTipoComboBox.Text, NUObservacionesRichTextBox.Text)
+                GuardarImagen(Me.id)
+                MessageBox.Show("Los datos de " & NUNombreTextBox.Text & " han sido guardados.", "Datos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
             Me.Dispose()
         Catch ex As ArgumentException
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
