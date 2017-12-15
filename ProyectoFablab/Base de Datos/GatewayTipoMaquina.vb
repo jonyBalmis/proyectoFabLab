@@ -27,7 +27,7 @@ Public Class GatewayTipoMaquinas
     Public Function Insertar(tipo As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
-        Dim consulta As String = String.Format("INSERT INTO Maquinas(modelo) VALUES ('{0}')", tipo)
+        Dim consulta As String = String.Format("INSERT INTO TiposMaquina(tipo) VALUES ('{0}')", tipo)
         'Validamos los datos
         If tipo = "" Or tipo Is Nothing Then
             Throw New ArgumentException("El tipo no puede estar vacío")

@@ -83,4 +83,15 @@
     Private Sub PrecioTextBox_Validated(sender As Object, e As EventArgs) Handles PrecioTextBox.Validated
         ErrorProvider1.SetError(DirectCast(sender, Control), "")
     End Sub
+
+    Private Sub Form3_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        ActualizarComboBox()
+    End Sub
+
+    Private Sub AnadirButton_Click(sender As Object, e As EventArgs) Handles AnadirButton.Click
+        Dim nuevotipo As NuevoTipoMaquina = New NuevoTipoMaquina()
+        nuevotipo.MdiParent = VentanaPrincipal
+        nuevotipo.Show()
+
+    End Sub
 End Class
