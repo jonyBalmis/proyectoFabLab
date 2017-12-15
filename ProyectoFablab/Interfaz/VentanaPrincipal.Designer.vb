@@ -51,7 +51,7 @@ Partial Class VentanaPrincipal
         Me.InfoUToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.InfoMToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ImagenesProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.BarraProgressBar = New System.Windows.Forms.ProgressBar()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -255,20 +255,22 @@ Partial Class VentanaPrincipal
         Me.InfoMToolStripStatusLabel.Size = New System.Drawing.Size(71, 17)
         Me.InfoMToolStripStatusLabel.Text = "Máquinas: 0"
         '
-        'ImagenesProgressBar
+        'BarraProgressBar
         '
-        Me.ImagenesProgressBar.Location = New System.Drawing.Point(367, 265)
-        Me.ImagenesProgressBar.Name = "ImagenesProgressBar"
-        Me.ImagenesProgressBar.Size = New System.Drawing.Size(100, 23)
-        Me.ImagenesProgressBar.TabIndex = 4
-        Me.ImagenesProgressBar.Visible = False
+        Me.BarraProgressBar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarraProgressBar.Location = New System.Drawing.Point(367, 265)
+        Me.BarraProgressBar.Name = "BarraProgressBar"
+        Me.BarraProgressBar.Size = New System.Drawing.Size(100, 23)
+        Me.BarraProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.BarraProgressBar.TabIndex = 4
+        Me.BarraProgressBar.Visible = False
         '
         'VentanaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(511, 287)
-        Me.Controls.Add(Me.ImagenesProgressBar)
+        Me.Controls.Add(Me.BarraProgressBar)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -317,5 +319,5 @@ Partial Class VentanaPrincipal
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents InfoMToolStripStatusLabel As ToolStripStatusLabel
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ImagenesProgressBar As ProgressBar
+    Friend WithEvents BarraProgressBar As ProgressBar
 End Class

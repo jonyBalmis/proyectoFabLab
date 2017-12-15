@@ -51,18 +51,24 @@ Public Class NuevoUsuario
         End If
     End Sub
 
-    Private Sub NUExaminarButton_Click(sender As Object, e As EventArgs) Handles NUExaminarButton.Click
+    Private Async Sub NUExaminarButton_Click(sender As Object, e As EventArgs) Handles NUExaminarButton.Click
         Dim seleccionarImagen As New OpenFileDialog()
         Dim rutaImagen As String
+        Dim bytes As Byte()
+        Dim memory As MemoryStream
         seleccionarImagen.Filter = "Imágenes (*.jpg)|*.jpg |Imágenes(*.png)|*.png|Todas las imágenes(*.*)|*.*"
+        VentanaPrincipal.BarraProgressBar.Visible = True
 
         If seleccionarImagen.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             rutaImagen = seleccionarImagen.FileName
-            Me.NUFotoPictureBox.Image = Image.FromFile(rutaImagen)
+            bytes = Await ConseguirThumbnail(rutaImagen)
+            memory = New MemoryStream(bytes)
+            Me.NUFotoPictureBox.Image = Image.FromStream(memory)
             Me.NUFotoPictureBox.ImageLocation = rutaImagen
             Me.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
             imagenSeleccionada = True
         End If
+        VentanaPrincipal.BarraProgressBar.Visible = False
     End Sub
 
 

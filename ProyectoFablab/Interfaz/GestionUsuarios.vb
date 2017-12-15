@@ -58,7 +58,6 @@ Public Class GestionUsuarios
         Dim nuevo As NuevoUsuario = New NuevoUsuario()
         nuevo.MdiParent = VentanaPrincipal
         nuevo.Show()
-
     End Sub
 
     Private Sub GUConsultarButton_Click(sender As Object, e As EventArgs) Handles GUConsultarButton.Click
