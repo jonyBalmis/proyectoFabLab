@@ -22,6 +22,8 @@ Partial Class Form3
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.AnadirButton = New System.Windows.Forms.Button()
@@ -51,6 +53,7 @@ Partial Class Form3
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.CancelarButton = New System.Windows.Forms.Button()
         Me.AceptarButton = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -60,6 +63,7 @@ Partial Class Form3
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -114,7 +118,7 @@ Partial Class Form3
         Me.NMComboBox.Location = New System.Drawing.Point(92, 10)
         Me.NMComboBox.Name = "NMComboBox"
         Me.NMComboBox.Size = New System.Drawing.Size(121, 24)
-        Me.NMComboBox.TabIndex = 1
+        Me.NMComboBox.TabIndex = 3
         '
         'Label4
         '
@@ -140,7 +144,7 @@ Partial Class Form3
         Me.TelefonoTextBox.Location = New System.Drawing.Point(110, 10)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(134, 22)
-        Me.TelefonoTextBox.TabIndex = 3
+        Me.TelefonoTextBox.TabIndex = 2
         '
         'Label2
         '
@@ -167,7 +171,7 @@ Partial Class Form3
         Me.CompraDateTimePicker.Location = New System.Drawing.Point(6, 57)
         Me.CompraDateTimePicker.Name = "CompraDateTimePicker"
         Me.CompraDateTimePicker.Size = New System.Drawing.Size(274, 22)
-        Me.CompraDateTimePicker.TabIndex = 1
+        Me.CompraDateTimePicker.TabIndex = 4
         '
         'Label5
         '
@@ -193,7 +197,7 @@ Partial Class Form3
         Me.PrecioTextBox.Location = New System.Drawing.Point(92, 7)
         Me.PrecioTextBox.Name = "PrecioTextBox"
         Me.PrecioTextBox.Size = New System.Drawing.Size(121, 22)
-        Me.PrecioTextBox.TabIndex = 3
+        Me.PrecioTextBox.TabIndex = 1
         '
         'Label3
         '
@@ -219,7 +223,7 @@ Partial Class Form3
         Me.ModeloTextBox.Location = New System.Drawing.Point(110, 7)
         Me.ModeloTextBox.Name = "ModeloTextBox"
         Me.ModeloTextBox.Size = New System.Drawing.Size(134, 22)
-        Me.ModeloTextBox.TabIndex = 1
+        Me.ModeloTextBox.TabIndex = 0
         '
         'Label1
         '
@@ -251,7 +255,7 @@ Partial Class Form3
         Me.CaracteristicasRichTextBox.Location = New System.Drawing.Point(427, 36)
         Me.CaracteristicasRichTextBox.Name = "CaracteristicasRichTextBox"
         Me.CaracteristicasRichTextBox.Size = New System.Drawing.Size(385, 129)
-        Me.CaracteristicasRichTextBox.TabIndex = 3
+        Me.CaracteristicasRichTextBox.TabIndex = 6
         Me.CaracteristicasRichTextBox.Text = ""
         '
         'DescripcionRichTextBox
@@ -262,7 +266,7 @@ Partial Class Form3
         Me.DescripcionRichTextBox.Location = New System.Drawing.Point(9, 36)
         Me.DescripcionRichTextBox.Name = "DescripcionRichTextBox"
         Me.DescripcionRichTextBox.Size = New System.Drawing.Size(362, 129)
-        Me.DescripcionRichTextBox.TabIndex = 2
+        Me.DescripcionRichTextBox.TabIndex = 5
         Me.DescripcionRichTextBox.Text = ""
         '
         'Label7
@@ -300,7 +304,7 @@ Partial Class Form3
         Me.ExaminarButton.Location = New System.Drawing.Point(110, 11)
         Me.ExaminarButton.Name = "ExaminarButton"
         Me.ExaminarButton.Size = New System.Drawing.Size(75, 23)
-        Me.ExaminarButton.TabIndex = 2
+        Me.ExaminarButton.TabIndex = 7
         Me.ExaminarButton.Text = "Examinar"
         Me.ExaminarButton.UseVisualStyleBackColor = True
         '
@@ -338,7 +342,7 @@ Partial Class Form3
         Me.CancelarButton.Location = New System.Drawing.Point(145, 10)
         Me.CancelarButton.Name = "CancelarButton"
         Me.CancelarButton.Size = New System.Drawing.Size(75, 26)
-        Me.CancelarButton.TabIndex = 1
+        Me.CancelarButton.TabIndex = 9
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
@@ -347,9 +351,13 @@ Partial Class Form3
         Me.AceptarButton.Location = New System.Drawing.Point(63, 10)
         Me.AceptarButton.Name = "AceptarButton"
         Me.AceptarButton.Size = New System.Drawing.Size(75, 26)
-        Me.AceptarButton.TabIndex = 0
+        Me.AceptarButton.TabIndex = 8
         Me.AceptarButton.Text = "Aceptar"
         Me.AceptarButton.UseVisualStyleBackColor = True
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'Form3
         '
@@ -357,6 +365,7 @@ Partial Class Form3
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(851, 499)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form3"
         Me.Text = "FabLab-NuevaMaquina "
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -375,6 +384,7 @@ Partial Class Form3
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -408,4 +418,5 @@ Partial Class Form3
     Friend WithEvents Panel8 As Panel
     Friend WithEvents CancelarButton As Button
     Friend WithEvents AceptarButton As Button
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

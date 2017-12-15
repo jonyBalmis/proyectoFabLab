@@ -34,6 +34,7 @@
 
     Private Sub NuevaButton_Click(sender As Object, e As EventArgs) Handles NuevaButton.Click
         Dim nueva As New Form3()
+
         nueva.MdiParent = VentanaPrincipal
         nueva.Show()
     End Sub
@@ -81,6 +82,7 @@
         consulta.MdiParent = VentanaPrincipal
         Try
             If GMTablaDataGridView.SelectedRows.Count = 1 Then
+                consulta.id = DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(0).Value, Integer)
                 consulta.ModeloTextBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(1).Value)
                 consulta.PrecioTextBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(2).Value)
                 consulta.CompraDateTimePicker.Value = DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
@@ -122,5 +124,9 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub GestionMaquinas_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        CargarDatos()
     End Sub
 End Class

@@ -67,7 +67,7 @@
         tabla = gateway.SeleccionarTodos()
         For Each maquina As DataRow In tabla.Rows
             Dim fecha As Date
-            fecha = DirectCast(maquina("fechaCompra"), Date)
+            fecha = DirectCast(maquina("fecha_compra"), Date)
             If maquina("modelo") Is modelo AndAlso fecha.CompareTo(fecha_compra) = 0 Then
                 Return False
             End If
