@@ -232,6 +232,17 @@
     <None Include="Resources\question-mark.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\Maquinas\1_1.jpg" />
+    <Content Include="Imagenes\Maquinas\1_2.jpg" />
+    <Content Include="Imagenes\Maquinas\2_1.jpg" />
+    <Content Include="Imagenes\Maquinas\2_2.jpg" />
+    <Content Include="Imagenes\Maquinas\2_3.jpg" />
+    <Content Include="Imagenes\Maquinas\3_1.jpg" />
+    <Content Include="Imagenes\Maquinas\3_2.jpg" />
+    <Content Include="Imagenes\Maquinas\4_1.jpg" />
+    <Content Include="Imagenes\Maquinas\4_2.jpg" />
+    <Content Include="Imagenes\Maquinas\4_3.jpg" />
+    <Content Include="Imagenes\Maquinas\5_1.jpg" />
     <Content Include="industrial-robot.ico" />
     <None Include="Resources\contacto.png" />
     <None Include="Resources\search.png" />
@@ -243,7 +254,6 @@
     <None Include="Resources\Proyectologo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagenes\Maquinas\" />
     <Folder Include="Imagenes\Usuarios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -1,4 +1,6 @@
-﻿Public Class GestionMaquinas
+﻿Imports System.IO
+
+Public Class GestionMaquinas
     Private source As BindingSource
     Dim dataSet As DataSet
     Dim hintActivo As Boolean = True
@@ -63,8 +65,18 @@
                 consulta.CaracteristicasRichTextBox.ReadOnly = True
                 consulta.AnadirButton.Visible = False
                 consulta.ExaminarButton.Visible = False
-                'consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
-                'consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+
+
+                Dim imgs As String() = Directory.GetFiles(My.Settings.MaquinasImg, DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(0).Value, Integer) & "*")
+
+                For Each img As String In imgs
+                    Dim bitmap As New Bitmap(My.Settings.MaquinasImg & img)
+                    Dim picturebox As New PictureBox()
+                    picturebox.Size = New Size(150, 120)
+                    picturebox.Image = DirectCast(bitmap, Image)
+                    picturebox.SizeMode = PictureBoxSizeMode.StretchImage
+                    consulta.ImagenesFlowLayoutPanel.Controls.Add(picturebox)
+                Next
                 consulta.AceptarButton.Visible = False
                 consulta.CancelarButton.Text = "Salir"
                 consulta.Show()
@@ -93,8 +105,16 @@
                 consulta.NMComboBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(5).Value)
                 consulta.DescripcionRichTextBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(6).Value)
                 consulta.CaracteristicasRichTextBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(7).Value)
-                'consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
-                'consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+                Dim imgs As String() = Directory.GetFiles(My.Settings.MaquinasImg, DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(0).Value, Integer) & "*")
+
+                For Each img As String In imgs
+                    Dim bitmap As New Bitmap(My.Settings.MaquinasImg & img)
+                    Dim picturebox As New PictureBox()
+                    picturebox.Size = New Size(150, 120)
+                    picturebox.Image = DirectCast(bitmap, Image)
+                    picturebox.SizeMode = PictureBoxSizeMode.StretchImage
+                    consulta.ImagenesFlowLayoutPanel.Controls.Add(picturebox)
+                Next
                 consulta.AceptarButton.Text = "Guardar"
                 consulta.Show()
 
@@ -132,4 +152,17 @@
     Private Sub GestionMaquinas_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
         CargarDatos()
     End Sub
+    ''' <summary>
+    ''' Obtiene las imagenes de las maquinas.
+    ''' </summary>
+    ''' <param name="id">Identificador </param>
+    ''' <returns>Imagenes de las maquinas.</returns>
+    Private Function ObtenerImagenes(id As String) As Image
+        Dim directorio As System.IO.DirectoryInfo = New System.IO.DirectoryInfo(My.Settings.MaquinasImg)
+
+        If directorio.GetFiles(id & ".png").Count() = 0 And directorio.GetFiles(id & ".jpg").Count() = 0 Then
+            Return Image.FromFile(My.Settings.UsuariosImg & "0.png")
+        End If
+        Return Image.FromFile(My.Settings.UsuariosImg & id & ".png")
+    End Function
 End Class
