@@ -31,7 +31,7 @@ Partial Class NuevoTipoUsuario
         '
         'CancelarTipoButton
         '
-        Me.CancelarTipoButton.Location = New System.Drawing.Point(135, 130)
+        Me.CancelarTipoButton.Location = New System.Drawing.Point(135, 94)
         Me.CancelarTipoButton.Name = "CancelarTipoButton"
         Me.CancelarTipoButton.Size = New System.Drawing.Size(75, 23)
         Me.CancelarTipoButton.TabIndex = 3
@@ -40,7 +40,7 @@ Partial Class NuevoTipoUsuario
         '
         'AceptarTipoButton
         '
-        Me.AceptarTipoButton.Location = New System.Drawing.Point(54, 130)
+        Me.AceptarTipoButton.Location = New System.Drawing.Point(54, 94)
         Me.AceptarTipoButton.Name = "AceptarTipoButton"
         Me.AceptarTipoButton.Size = New System.Drawing.Size(75, 23)
         Me.AceptarTipoButton.TabIndex = 2
@@ -50,7 +50,7 @@ Partial Class NuevoTipoUsuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 76)
+        Me.Label1.Location = New System.Drawing.Point(51, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 13)
         Me.Label1.TabIndex = 5
@@ -58,7 +58,7 @@ Partial Class NuevoTipoUsuario
         '
         'AddTipoTextBox
         '
-        Me.AddTipoTextBox.Location = New System.Drawing.Point(54, 92)
+        Me.AddTipoTextBox.Location = New System.Drawing.Point(54, 56)
         Me.AddTipoTextBox.Name = "AddTipoTextBox"
         Me.AddTipoTextBox.Size = New System.Drawing.Size(156, 20)
         Me.AddTipoTextBox.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class NuevoTipoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(258, 195)
+        Me.ClientSize = New System.Drawing.Size(258, 155)
         Me.Controls.Add(Me.CancelarTipoButton)
         Me.Controls.Add(Me.AceptarTipoButton)
         Me.Controls.Add(Me.Label1)

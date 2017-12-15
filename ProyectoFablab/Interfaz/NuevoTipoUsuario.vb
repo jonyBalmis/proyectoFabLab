@@ -3,7 +3,7 @@
 
         Try
             TipoUsuario.InsertarTipo(AddTipoTextBox.Text)
-            NuevoUsuario.ActualizarComboBox()
+            ' NuevoUsuario.ActualizarComboBox()
             Me.Close()
         Catch ex As ArgumentException
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

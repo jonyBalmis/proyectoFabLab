@@ -83,4 +83,7 @@ Public Class NuevoUsuario
         NUTipoComboBox.DataSource = TipoUsuario.SeleccionarTipos()
     End Sub
 
+    Private Sub NuevoUsuario_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        ActualizarComboBox()
+    End Sub
 End Class
