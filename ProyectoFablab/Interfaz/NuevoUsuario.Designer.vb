@@ -114,7 +114,7 @@ Partial Class NuevoUsuario
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(280, 62)
-        Me.Panel1.TabIndex = 0
+        Me.Panel1.TabIndex = 1
         '
         'NUNombreTextBox
         '
@@ -143,7 +143,7 @@ Partial Class NuevoUsuario
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(280, 62)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 4
         '
         'NUTelefonoTextBox
         '
@@ -151,7 +151,7 @@ Partial Class NuevoUsuario
         Me.NUTelefonoTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUTelefonoTextBox.Name = "NUTelefonoTextBox"
         Me.NUTelefonoTextBox.Size = New System.Drawing.Size(119, 20)
-        Me.NUTelefonoTextBox.TabIndex = 3
+        Me.NUTelefonoTextBox.TabIndex = 4
         '
         'Label2
         '
@@ -172,7 +172,7 @@ Partial Class NuevoUsuario
         Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(280, 62)
-        Me.Panel3.TabIndex = 2
+        Me.Panel3.TabIndex = 7
         '
         'NUOrganizacionTextBox
         '
@@ -180,7 +180,7 @@ Partial Class NuevoUsuario
         Me.NUOrganizacionTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUOrganizacionTextBox.Name = "NUOrganizacionTextBox"
         Me.NUOrganizacionTextBox.Size = New System.Drawing.Size(119, 20)
-        Me.NUOrganizacionTextBox.TabIndex = 3
+        Me.NUOrganizacionTextBox.TabIndex = 7
         '
         'Label7
         '
@@ -201,7 +201,7 @@ Partial Class NuevoUsuario
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(263, 62)
-        Me.Panel4.TabIndex = 3
+        Me.Panel4.TabIndex = 2
         '
         'NUApellidosTextBox
         '
@@ -209,12 +209,12 @@ Partial Class NuevoUsuario
         Me.NUApellidosTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUApellidosTextBox.Name = "NUApellidosTextBox"
         Me.NUApellidosTextBox.Size = New System.Drawing.Size(98, 20)
-        Me.NUApellidosTextBox.TabIndex = 3
+        Me.NUApellidosTextBox.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(0, 17)
+        Me.Label3.Location = New System.Drawing.Point(2, 17)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
@@ -230,7 +230,7 @@ Partial Class NuevoUsuario
         Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(263, 62)
-        Me.Panel5.TabIndex = 4
+        Me.Panel5.TabIndex = 5
         '
         'NUEmailTextBox
         '
@@ -238,7 +238,7 @@ Partial Class NuevoUsuario
         Me.NUEmailTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUEmailTextBox.Name = "NUEmailTextBox"
         Me.NUEmailTextBox.Size = New System.Drawing.Size(98, 20)
-        Me.NUEmailTextBox.TabIndex = 3
+        Me.NUEmailTextBox.TabIndex = 5
         '
         'Label4
         '
@@ -259,7 +259,7 @@ Partial Class NuevoUsuario
         Me.Panel6.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(293, 62)
-        Me.Panel6.TabIndex = 5
+        Me.Panel6.TabIndex = 3
         '
         'NUFechaDateTimePicker
         '
@@ -269,7 +269,7 @@ Partial Class NuevoUsuario
         Me.NUFechaDateTimePicker.Margin = New System.Windows.Forms.Padding(2)
         Me.NUFechaDateTimePicker.Name = "NUFechaDateTimePicker"
         Me.NUFechaDateTimePicker.Size = New System.Drawing.Size(86, 20)
-        Me.NUFechaDateTimePicker.TabIndex = 4
+        Me.NUFechaDateTimePicker.TabIndex = 3
         '
         'Label5
         '
@@ -298,17 +298,17 @@ Partial Class NuevoUsuario
         Me.NUDireccionTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUDireccionTextBox.Name = "NUDireccionTextBox"
         Me.NUDireccionTextBox.Size = New System.Drawing.Size(132, 20)
-        Me.NUDireccionTextBox.TabIndex = 3
+        Me.NUDireccionTextBox.TabIndex = 6
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(2, 17)
+        Me.Label6.Location = New System.Drawing.Point(32, 22)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(83, 13)
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Dirección postal"
+        Me.Label6.Text = "Dirección"
         '
         'Panel8
         '
@@ -320,7 +320,7 @@ Partial Class NuevoUsuario
         Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(263, 62)
-        Me.Panel8.TabIndex = 7
+        Me.Panel8.TabIndex = 8
         '
         'NUTipoComboBox
         '
@@ -329,7 +329,7 @@ Partial Class NuevoUsuario
         Me.NUTipoComboBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUTipoComboBox.Name = "NUTipoComboBox"
         Me.NUTipoComboBox.Size = New System.Drawing.Size(98, 21)
-        Me.NUTipoComboBox.TabIndex = 5
+        Me.NUTipoComboBox.TabIndex = 8
         '
         'NUTipoButton
         '
@@ -337,7 +337,7 @@ Partial Class NuevoUsuario
         Me.NUTipoButton.Margin = New System.Windows.Forms.Padding(2)
         Me.NUTipoButton.Name = "NUTipoButton"
         Me.NUTipoButton.Size = New System.Drawing.Size(27, 19)
-        Me.NUTipoButton.TabIndex = 4
+        Me.NUTipoButton.TabIndex = 9
         Me.NUTipoButton.Text = "+"
         Me.NUTipoButton.UseVisualStyleBackColor = True
         '
@@ -388,7 +388,7 @@ Partial Class NuevoUsuario
         Me.NUExaminarButton.Margin = New System.Windows.Forms.Padding(2)
         Me.NUExaminarButton.Name = "NUExaminarButton"
         Me.NUExaminarButton.Size = New System.Drawing.Size(70, 19)
-        Me.NUExaminarButton.TabIndex = 1
+        Me.NUExaminarButton.TabIndex = 10
         Me.NUExaminarButton.Text = "Examinar"
         Me.NUExaminarButton.UseVisualStyleBackColor = True
         '
@@ -420,7 +420,7 @@ Partial Class NuevoUsuario
         Me.NUObservacionesRichTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.NUObservacionesRichTextBox.Name = "NUObservacionesRichTextBox"
         Me.NUObservacionesRichTextBox.Size = New System.Drawing.Size(434, 99)
-        Me.NUObservacionesRichTextBox.TabIndex = 1
+        Me.NUObservacionesRichTextBox.TabIndex = 11
         Me.NUObservacionesRichTextBox.Text = ""
         '
         'Label10
@@ -450,7 +450,7 @@ Partial Class NuevoUsuario
         Me.NUCancelarButton.Margin = New System.Windows.Forms.Padding(2)
         Me.NUCancelarButton.Name = "NUCancelarButton"
         Me.NUCancelarButton.Size = New System.Drawing.Size(66, 19)
-        Me.NUCancelarButton.TabIndex = 1
+        Me.NUCancelarButton.TabIndex = 13
         Me.NUCancelarButton.Text = "Cancelar"
         Me.NUCancelarButton.UseVisualStyleBackColor = True
         '
@@ -460,7 +460,7 @@ Partial Class NuevoUsuario
         Me.NUAceptarButton.Margin = New System.Windows.Forms.Padding(2)
         Me.NUAceptarButton.Name = "NUAceptarButton"
         Me.NUAceptarButton.Size = New System.Drawing.Size(56, 19)
-        Me.NUAceptarButton.TabIndex = 0
+        Me.NUAceptarButton.TabIndex = 12
         Me.NUAceptarButton.Text = "Aceptar"
         Me.NUAceptarButton.UseVisualStyleBackColor = True
         '
@@ -471,6 +471,7 @@ Partial Class NuevoUsuario
         Me.ClientSize = New System.Drawing.Size(848, 445)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "NuevoUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FabLab-Nuevo usuario"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

@@ -33,7 +33,7 @@ Partial Class NuevoTipoUsuario
         Me.CancelarTipoButton.Location = New System.Drawing.Point(135, 130)
         Me.CancelarTipoButton.Name = "CancelarTipoButton"
         Me.CancelarTipoButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelarTipoButton.TabIndex = 7
+        Me.CancelarTipoButton.TabIndex = 3
         Me.CancelarTipoButton.Text = "Cancelar"
         Me.CancelarTipoButton.UseVisualStyleBackColor = True
         '
@@ -42,7 +42,7 @@ Partial Class NuevoTipoUsuario
         Me.AceptarTipoButton.Location = New System.Drawing.Point(54, 130)
         Me.AceptarTipoButton.Name = "AceptarTipoButton"
         Me.AceptarTipoButton.Size = New System.Drawing.Size(75, 23)
-        Me.AceptarTipoButton.TabIndex = 6
+        Me.AceptarTipoButton.TabIndex = 2
         Me.AceptarTipoButton.Text = "Aceptar"
         Me.AceptarTipoButton.UseVisualStyleBackColor = True
         '
@@ -60,7 +60,7 @@ Partial Class NuevoTipoUsuario
         Me.AddTipoTextBox.Location = New System.Drawing.Point(54, 92)
         Me.AddTipoTextBox.Name = "AddTipoTextBox"
         Me.AddTipoTextBox.Size = New System.Drawing.Size(156, 20)
-        Me.AddTipoTextBox.TabIndex = 4
+        Me.AddTipoTextBox.TabIndex = 1
         '
         'NuevoTipoUsuario
         '
@@ -72,6 +72,7 @@ Partial Class NuevoTipoUsuario
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.AddTipoTextBox)
         Me.Name = "NuevoTipoUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NuevoTipoUsuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()

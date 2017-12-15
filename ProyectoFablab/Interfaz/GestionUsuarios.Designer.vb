@@ -85,7 +85,7 @@ Partial Class GestionUsuarios
         Me.GUBuscarTextBox.Location = New System.Drawing.Point(48, 24)
         Me.GUBuscarTextBox.Name = "GUBuscarTextBox"
         Me.GUBuscarTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.GUBuscarTextBox.TabIndex = 2
+        Me.GUBuscarTextBox.TabIndex = 1
         '
         'GUNuevoButton
         '
@@ -93,7 +93,7 @@ Partial Class GestionUsuarios
         Me.GUNuevoButton.Location = New System.Drawing.Point(518, 21)
         Me.GUNuevoButton.Name = "GUNuevoButton"
         Me.GUNuevoButton.Size = New System.Drawing.Size(95, 23)
-        Me.GUNuevoButton.TabIndex = 1
+        Me.GUNuevoButton.TabIndex = 2
         Me.GUNuevoButton.Text = "Nuevo Usuario"
         Me.GUNuevoButton.UseVisualStyleBackColor = True
         '
@@ -114,7 +114,7 @@ Partial Class GestionUsuarios
         Me.GUEliminarButton.Location = New System.Drawing.Point(537, 15)
         Me.GUEliminarButton.Name = "GUEliminarButton"
         Me.GUEliminarButton.Size = New System.Drawing.Size(75, 23)
-        Me.GUEliminarButton.TabIndex = 2
+        Me.GUEliminarButton.TabIndex = 6
         Me.GUEliminarButton.Text = "Eliminar"
         Me.GUEliminarButton.UseVisualStyleBackColor = True
         '
@@ -124,7 +124,7 @@ Partial Class GestionUsuarios
         Me.GUEditarButton.Location = New System.Drawing.Point(450, 15)
         Me.GUEditarButton.Name = "GUEditarButton"
         Me.GUEditarButton.Size = New System.Drawing.Size(75, 23)
-        Me.GUEditarButton.TabIndex = 1
+        Me.GUEditarButton.TabIndex = 5
         Me.GUEditarButton.Text = "Editar"
         Me.GUEditarButton.UseVisualStyleBackColor = True
         '
@@ -134,7 +134,7 @@ Partial Class GestionUsuarios
         Me.GUConsultarButton.Location = New System.Drawing.Point(363, 15)
         Me.GUConsultarButton.Name = "GUConsultarButton"
         Me.GUConsultarButton.Size = New System.Drawing.Size(75, 23)
-        Me.GUConsultarButton.TabIndex = 0
+        Me.GUConsultarButton.TabIndex = 4
         Me.GUConsultarButton.Text = "Consultar"
         Me.GUConsultarButton.UseVisualStyleBackColor = True
         '
@@ -156,7 +156,7 @@ Partial Class GestionUsuarios
         Me.GUDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.GUDataGridView.Name = "GUDataGridView"
         Me.GUDataGridView.Size = New System.Drawing.Size(661, 263)
-        Me.GUDataGridView.TabIndex = 1
+        Me.GUDataGridView.TabIndex = 3
         '
         'GestionUsuarios
         '
