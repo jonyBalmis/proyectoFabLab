@@ -33,7 +33,9 @@ Public Class GatewayMaquinas
     Public Function Insertar(modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
-        Dim consulta As String = String.Format("INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefono_sat,tipo,descripcion,caracteristicas) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas)
+        comando.Parameters.Add("@fecha", SqlDbType.Date)
+        comando.Parameters("@fecha").Value = fecha_compra
+        Dim consulta As String = String.Format("INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefono_sat,tipo,descripcion,caracteristicas) VALUES ('{0}','{1}',@fecha,'{3}','{4}','{5}','{6}')", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas)
         'Validamos los datos
         If modelo = "" Or modelo Is Nothing Then
             Throw New ArgumentException("El modelo no puede estar vacío")
@@ -81,7 +83,9 @@ Public Class GatewayMaquinas
     Public Function Actualizar(id As Integer, modelo As String, precio_hora As Double, fecha_compra As Date, telefono_sat As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
         Dim filas As Integer
         'Creamos la sentencia SQL de inserción
-        Dim consulta As String = String.Format("UPDATE Maquinas SET modelo='{0}',precio_hora='{1}',fecha_compra='{2}',telefono_sat='{3}',tipo='{4}',descripcion='{5}',caracteristicas='{6}' WHERE id='{7}'", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas, id)
+        comando.Parameters.Add("@fecha", SqlDbType.Date)
+        comando.Parameters("@fecha").Value = fecha_compra
+        Dim consulta As String = String.Format("UPDATE Maquinas SET modelo='{0}',precio_hora='{1}',fecha_compra=@fecha,telefono_sat='{3}',tipo='{4}',descripcion='{5}',caracteristicas='{6}' WHERE id='{7}'", modelo, precio_hora, fecha_compra, telefono_sat, tipo, descripcion, caracteristicas, id)
         'Validamos los datos
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede ser 0")
