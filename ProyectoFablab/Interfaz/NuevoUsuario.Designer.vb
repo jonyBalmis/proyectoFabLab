@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NuevoUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class NuevoUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -102,7 +102,7 @@ Partial Class NuevoUsuario
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(776, 445)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(848, 445)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'Panel1
@@ -113,7 +113,7 @@ Partial Class NuevoUsuario
         Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(256, 62)
+        Me.Panel1.Size = New System.Drawing.Size(280, 62)
         Me.Panel1.TabIndex = 0
         '
         'NUNombreTextBox
@@ -142,7 +142,7 @@ Partial Class NuevoUsuario
         Me.Panel2.Location = New System.Drawing.Point(2, 68)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(256, 62)
+        Me.Panel2.Size = New System.Drawing.Size(280, 62)
         Me.Panel2.TabIndex = 1
         '
         'NUTelefonoTextBox
@@ -171,7 +171,7 @@ Partial Class NuevoUsuario
         Me.Panel3.Location = New System.Drawing.Point(2, 134)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(256, 62)
+        Me.Panel3.Size = New System.Drawing.Size(280, 62)
         Me.Panel3.TabIndex = 2
         '
         'NUOrganizacionTextBox
@@ -197,10 +197,10 @@ Partial Class NuevoUsuario
         Me.Panel4.Controls.Add(Me.NUApellidosTextBox)
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(262, 2)
+        Me.Panel4.Location = New System.Drawing.Point(286, 2)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(240, 62)
+        Me.Panel4.Size = New System.Drawing.Size(263, 62)
         Me.Panel4.TabIndex = 3
         '
         'NUApellidosTextBox
@@ -226,10 +226,10 @@ Partial Class NuevoUsuario
         Me.Panel5.Controls.Add(Me.NUEmailTextBox)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(262, 68)
+        Me.Panel5.Location = New System.Drawing.Point(286, 68)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(240, 62)
+        Me.Panel5.Size = New System.Drawing.Size(263, 62)
         Me.Panel5.TabIndex = 4
         '
         'NUEmailTextBox
@@ -255,18 +255,20 @@ Partial Class NuevoUsuario
         Me.Panel6.Controls.Add(Me.NUFechaDateTimePicker)
         Me.Panel6.Controls.Add(Me.Label5)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(506, 2)
+        Me.Panel6.Location = New System.Drawing.Point(553, 2)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(268, 62)
+        Me.Panel6.Size = New System.Drawing.Size(293, 62)
         Me.Panel6.TabIndex = 5
         '
         'NUFechaDateTimePicker
         '
+        Me.NUFechaDateTimePicker.CustomFormat = "dd/MM/yyyy"
+        Me.NUFechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.NUFechaDateTimePicker.Location = New System.Drawing.Point(111, 17)
         Me.NUFechaDateTimePicker.Margin = New System.Windows.Forms.Padding(2)
         Me.NUFechaDateTimePicker.Name = "NUFechaDateTimePicker"
-        Me.NUFechaDateTimePicker.Size = New System.Drawing.Size(132, 20)
+        Me.NUFechaDateTimePicker.Size = New System.Drawing.Size(86, 20)
         Me.NUFechaDateTimePicker.TabIndex = 4
         '
         'Label5
@@ -284,10 +286,10 @@ Partial Class NuevoUsuario
         Me.Panel7.Controls.Add(Me.NUDireccionTextBox)
         Me.Panel7.Controls.Add(Me.Label6)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(506, 68)
+        Me.Panel7.Location = New System.Drawing.Point(553, 68)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(268, 62)
+        Me.Panel7.Size = New System.Drawing.Size(293, 62)
         Me.Panel7.TabIndex = 6
         '
         'NUDireccionTextBox
@@ -314,10 +316,10 @@ Partial Class NuevoUsuario
         Me.Panel8.Controls.Add(Me.NUTipoButton)
         Me.Panel8.Controls.Add(Me.Label8)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel8.Location = New System.Drawing.Point(262, 134)
+        Me.Panel8.Location = New System.Drawing.Point(286, 134)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(240, 62)
+        Me.Panel8.Size = New System.Drawing.Size(263, 62)
         Me.Panel8.TabIndex = 7
         '
         'NUTipoComboBox
@@ -352,10 +354,10 @@ Partial Class NuevoUsuario
         'Panel9
         '
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel9.Location = New System.Drawing.Point(506, 134)
+        Me.Panel9.Location = New System.Drawing.Point(553, 134)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(268, 62)
+        Me.Panel9.Size = New System.Drawing.Size(293, 62)
         Me.Panel9.TabIndex = 8
         '
         'Panel10
@@ -368,7 +370,7 @@ Partial Class NuevoUsuario
         Me.Panel10.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel10.Name = "Panel10"
         Me.TableLayoutPanel1.SetRowSpan(Me.Panel10, 2)
-        Me.Panel10.Size = New System.Drawing.Size(256, 243)
+        Me.Panel10.Size = New System.Drawing.Size(280, 243)
         Me.Panel10.TabIndex = 9
         '
         'NUFotoPictureBox
@@ -406,10 +408,10 @@ Partial Class NuevoUsuario
         Me.Panel11.Controls.Add(Me.NUObservacionesRichTextBox)
         Me.Panel11.Controls.Add(Me.Label10)
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel11.Location = New System.Drawing.Point(262, 200)
+        Me.Panel11.Location = New System.Drawing.Point(286, 200)
         Me.Panel11.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(512, 174)
+        Me.Panel11.Size = New System.Drawing.Size(560, 174)
         Me.Panel11.TabIndex = 10
         '
         'NUObservacionesRichTextBox
@@ -436,10 +438,10 @@ Partial Class NuevoUsuario
         Me.Panel12.Controls.Add(Me.NUCancelarButton)
         Me.Panel12.Controls.Add(Me.NUAceptarButton)
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel12.Location = New System.Drawing.Point(506, 378)
+        Me.Panel12.Location = New System.Drawing.Point(553, 378)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(268, 65)
+        Me.Panel12.Size = New System.Drawing.Size(293, 65)
         Me.Panel12.TabIndex = 11
         '
         'NUCancelarButton
@@ -466,7 +468,7 @@ Partial Class NuevoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 445)
+        Me.ClientSize = New System.Drawing.Size(848, 445)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "NuevoUsuario"
         Me.Text = "FabLab-Nuevo usuario"

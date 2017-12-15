@@ -33,10 +33,6 @@ Public Class GatewayUsuario
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede tener valor 0.")
 
-        ' If Not Modulos.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
-        ' Throw New ArgumentException("El campo fecha no puede estar vacío")
-        'End If
-
         Try
             comando.Parameters.Add("@nombre", SqlDbType.VarChar)
             comando.Parameters("@nombre").Value = nombre
@@ -87,11 +83,7 @@ Public Class GatewayUsuario
         Dim reservas As GatewayReservas = New GatewayReservas(My.Settings.Conexion)
 
         consulta = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
-
-
-        If id = 0 Then
-            Throw New ArgumentException("El identificador no puede estar vacío.")
-        End If
+        DatoNoValido(id, 0, "El identificador no puede estar vacío.")
 
         Try
             conexion.Open()
@@ -134,9 +126,6 @@ Public Class GatewayUsuario
         DatoNoValido(nombre.Trim(), "", "El campo nombre no puede estar vacío.")
         DatoNoValido(apellidos.Trim(), "", "El campo apellidos no puede estar vacío.")
         DatoNoValido(tipo, 0, "El campo tipo no puede no puede tener valor 0.")
-        '  If Not Modulo.ValidaCadena(fechaNac, "^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])/([0][1-9]|[1][0-2])/\d{4}$") Then
-        ' Throw New ArgumentException("El campo fecha no puede estar vacío")
-        'End If
         comando.Parameters.Add("@nombre", SqlDbType.VarChar)
         comando.Parameters("@nombre").Value = nombre
         comando.Parameters.Add("@apellidos", SqlDbType.VarChar)

@@ -6,10 +6,11 @@
     ''' <param name="telefono">Numero de teléfono.</param>
     ''' <param name="correo">Correo eléctronico.</param>
     Private Sub ContactoObligatorio(ByVal telefono As String, ByVal correo As String)
-        Dim mensajeFono As String = "El teléfono debe contener 9 dígitos."
+        Dim mensajeFono As String = "El teléfono debe ser valor numérico y contener 9 dígitos."
         Dim mensajeCorreo As String = "Introduce un correo válido."
-        Dim patronFono As String = "[0-9]{9}"
+        Dim patronFono As String = "^[0-9]{9}$"
         Dim patronCorreo As String = "^\w+@\w+.[a-z]{3}$"
+
         If Not telefono.Trim().Equals("") And Not correo.Trim().Equals("") Then
             If Not ValidaCadena(telefono, patronFono) Then
                 Throw New ArgumentException(mensajeFono)

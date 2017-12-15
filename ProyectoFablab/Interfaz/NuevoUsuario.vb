@@ -78,8 +78,9 @@ Public Class NuevoUsuario
 
     End Sub
 
-    Public  Sub ActualizarComboBox()
+    Public Sub ActualizarComboBox()
         NUTipoComboBox.DisplayMember = "tipo"
         NUTipoComboBox.DataSource = TipoUsuario.SeleccionarTipos()
     End Sub
+
 End Class
