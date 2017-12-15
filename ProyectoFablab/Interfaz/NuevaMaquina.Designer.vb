@@ -89,7 +89,7 @@ Partial Class Form3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(851, 499)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(874, 524)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Panel5
@@ -98,9 +98,9 @@ Partial Class Form3
         Me.Panel5.Controls.Add(Me.NMComboBox)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(286, 52)
+        Me.Panel5.Location = New System.Drawing.Point(294, 55)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(277, 43)
+        Me.Panel5.Size = New System.Drawing.Size(285, 46)
         Me.Panel5.TabIndex = 4
         '
         'AnadirButton
@@ -108,7 +108,7 @@ Partial Class Form3
         Me.AnadirButton.Location = New System.Drawing.Point(229, 10)
         Me.AnadirButton.Name = "AnadirButton"
         Me.AnadirButton.Size = New System.Drawing.Size(27, 23)
-        Me.AnadirButton.TabIndex = 2
+        Me.AnadirButton.TabIndex = 4
         Me.AnadirButton.Text = "+"
         Me.AnadirButton.UseVisualStyleBackColor = True
         '
@@ -134,9 +134,9 @@ Partial Class Form3
         Me.Panel4.Controls.Add(Me.TelefonoTextBox)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 52)
+        Me.Panel4.Location = New System.Drawing.Point(3, 55)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(277, 43)
+        Me.Panel4.Size = New System.Drawing.Size(285, 46)
         Me.Panel4.TabIndex = 3
         '
         'TelefonoTextBox
@@ -160,10 +160,10 @@ Partial Class Form3
         Me.Panel3.Controls.Add(Me.CompraDateTimePicker)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(569, 3)
+        Me.Panel3.Location = New System.Drawing.Point(585, 3)
         Me.Panel3.Name = "Panel3"
         Me.TableLayoutPanel1.SetRowSpan(Me.Panel3, 2)
-        Me.Panel3.Size = New System.Drawing.Size(279, 92)
+        Me.Panel3.Size = New System.Drawing.Size(286, 98)
         Me.Panel3.TabIndex = 2
         '
         'CompraDateTimePicker
@@ -171,7 +171,7 @@ Partial Class Form3
         Me.CompraDateTimePicker.Location = New System.Drawing.Point(6, 57)
         Me.CompraDateTimePicker.Name = "CompraDateTimePicker"
         Me.CompraDateTimePicker.Size = New System.Drawing.Size(274, 22)
-        Me.CompraDateTimePicker.TabIndex = 4
+        Me.CompraDateTimePicker.TabIndex = 5
         '
         'Label5
         '
@@ -187,9 +187,9 @@ Partial Class Form3
         Me.Panel2.Controls.Add(Me.PrecioTextBox)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(286, 3)
+        Me.Panel2.Location = New System.Drawing.Point(294, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(277, 43)
+        Me.Panel2.Size = New System.Drawing.Size(285, 46)
         Me.Panel2.TabIndex = 1
         '
         'PrecioTextBox
@@ -215,7 +215,7 @@ Partial Class Form3
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(277, 43)
+        Me.Panel1.Size = New System.Drawing.Size(285, 46)
         Me.Panel1.TabIndex = 0
         '
         'ModeloTextBox
@@ -242,9 +242,9 @@ Partial Class Form3
         Me.Panel6.Controls.Add(Me.Label7)
         Me.Panel6.Controls.Add(Me.Label6)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(3, 101)
+        Me.Panel6.Location = New System.Drawing.Point(3, 107)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(845, 168)
+        Me.Panel6.Size = New System.Drawing.Size(868, 177)
         Me.Panel6.TabIndex = 5
         '
         'CaracteristicasRichTextBox
@@ -254,19 +254,18 @@ Partial Class Form3
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CaracteristicasRichTextBox.Location = New System.Drawing.Point(427, 36)
         Me.CaracteristicasRichTextBox.Name = "CaracteristicasRichTextBox"
-        Me.CaracteristicasRichTextBox.Size = New System.Drawing.Size(385, 129)
-        Me.CaracteristicasRichTextBox.TabIndex = 6
+        Me.CaracteristicasRichTextBox.Size = New System.Drawing.Size(408, 138)
+        Me.CaracteristicasRichTextBox.TabIndex = 7
         Me.CaracteristicasRichTextBox.Text = ""
         '
         'DescripcionRichTextBox
         '
-        Me.DescripcionRichTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DescripcionRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DescripcionRichTextBox.Location = New System.Drawing.Point(9, 36)
         Me.DescripcionRichTextBox.Name = "DescripcionRichTextBox"
-        Me.DescripcionRichTextBox.Size = New System.Drawing.Size(362, 129)
-        Me.DescripcionRichTextBox.TabIndex = 5
+        Me.DescripcionRichTextBox.Size = New System.Drawing.Size(366, 138)
+        Me.DescripcionRichTextBox.TabIndex = 6
         Me.DescripcionRichTextBox.Text = ""
         '
         'Label7
@@ -294,17 +293,17 @@ Partial Class Form3
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Controls.Add(Me.ImagenesFlowLayoutPanel)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(3, 275)
+        Me.Panel7.Location = New System.Drawing.Point(3, 290)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(845, 168)
+        Me.Panel7.Size = New System.Drawing.Size(868, 177)
         Me.Panel7.TabIndex = 6
         '
         'ExaminarButton
         '
         Me.ExaminarButton.Location = New System.Drawing.Point(110, 11)
         Me.ExaminarButton.Name = "ExaminarButton"
-        Me.ExaminarButton.Size = New System.Drawing.Size(75, 23)
-        Me.ExaminarButton.TabIndex = 7
+        Me.ExaminarButton.Size = New System.Drawing.Size(87, 23)
+        Me.ExaminarButton.TabIndex = 8
         Me.ExaminarButton.Text = "Examinar"
         Me.ExaminarButton.UseVisualStyleBackColor = True
         '
@@ -324,17 +323,17 @@ Partial Class Form3
         Me.ImagenesFlowLayoutPanel.AutoScroll = True
         Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(3, 44)
         Me.ImagenesFlowLayoutPanel.Name = "ImagenesFlowLayoutPanel"
-        Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(851, 121)
-        Me.ImagenesFlowLayoutPanel.TabIndex = 0
+        Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(851, 130)
+        Me.ImagenesFlowLayoutPanel.TabIndex = 9
         '
         'Panel8
         '
         Me.Panel8.Controls.Add(Me.CancelarButton)
         Me.Panel8.Controls.Add(Me.AceptarButton)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel8.Location = New System.Drawing.Point(569, 449)
+        Me.Panel8.Location = New System.Drawing.Point(585, 473)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(279, 47)
+        Me.Panel8.Size = New System.Drawing.Size(286, 48)
         Me.Panel8.TabIndex = 7
         '
         'CancelarButton
@@ -342,7 +341,7 @@ Partial Class Form3
         Me.CancelarButton.Location = New System.Drawing.Point(145, 10)
         Me.CancelarButton.Name = "CancelarButton"
         Me.CancelarButton.Size = New System.Drawing.Size(75, 26)
-        Me.CancelarButton.TabIndex = 9
+        Me.CancelarButton.TabIndex = 11
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
@@ -351,7 +350,7 @@ Partial Class Form3
         Me.AceptarButton.Location = New System.Drawing.Point(63, 10)
         Me.AceptarButton.Name = "AceptarButton"
         Me.AceptarButton.Size = New System.Drawing.Size(75, 26)
-        Me.AceptarButton.TabIndex = 8
+        Me.AceptarButton.TabIndex = 10
         Me.AceptarButton.Text = "Aceptar"
         Me.AceptarButton.UseVisualStyleBackColor = True
         '
@@ -363,9 +362,10 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(851, 499)
+        Me.ClientSize = New System.Drawing.Size(874, 524)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(892, 571)
         Me.Name = "Form3"
         Me.Text = "FabLab-NuevaMaquina "
         Me.TableLayoutPanel1.ResumeLayout(False)

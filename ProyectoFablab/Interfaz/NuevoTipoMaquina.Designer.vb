@@ -22,6 +22,7 @@ Partial Class NuevoTipoMaquina
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NuevoTipoMaquina))
         Me.CancelarTipoButton = New System.Windows.Forms.Button()
         Me.AceptarTipoButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,48 +31,55 @@ Partial Class NuevoTipoMaquina
         '
         'CancelarTipoButton
         '
-        Me.CancelarTipoButton.Location = New System.Drawing.Point(143, 100)
+        Me.CancelarTipoButton.Location = New System.Drawing.Point(191, 123)
+        Me.CancelarTipoButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CancelarTipoButton.Name = "CancelarTipoButton"
-        Me.CancelarTipoButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelarTipoButton.TabIndex = 11
+        Me.CancelarTipoButton.Size = New System.Drawing.Size(100, 28)
+        Me.CancelarTipoButton.TabIndex = 2
         Me.CancelarTipoButton.Text = "Cancelar"
         Me.CancelarTipoButton.UseVisualStyleBackColor = True
         '
         'AceptarTipoButton
         '
-        Me.AceptarTipoButton.Location = New System.Drawing.Point(62, 100)
+        Me.AceptarTipoButton.Location = New System.Drawing.Point(83, 123)
+        Me.AceptarTipoButton.Margin = New System.Windows.Forms.Padding(4)
         Me.AceptarTipoButton.Name = "AceptarTipoButton"
-        Me.AceptarTipoButton.Size = New System.Drawing.Size(75, 23)
-        Me.AceptarTipoButton.TabIndex = 10
+        Me.AceptarTipoButton.Size = New System.Drawing.Size(100, 28)
+        Me.AceptarTipoButton.TabIndex = 1
         Me.AceptarTipoButton.Text = "Aceptar"
         Me.AceptarTipoButton.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(59, 46)
+        Me.Label1.Location = New System.Drawing.Point(79, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 13)
+        Me.Label1.Size = New System.Drawing.Size(114, 17)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Tipo de maquina"
         '
         'AddTipoTextBox
         '
-        Me.AddTipoTextBox.Location = New System.Drawing.Point(62, 62)
+        Me.AddTipoTextBox.Location = New System.Drawing.Point(83, 76)
+        Me.AddTipoTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.AddTipoTextBox.Name = "AddTipoTextBox"
-        Me.AddTipoTextBox.Size = New System.Drawing.Size(156, 20)
-        Me.AddTipoTextBox.TabIndex = 8
+        Me.AddTipoTextBox.Size = New System.Drawing.Size(207, 22)
+        Me.AddTipoTextBox.TabIndex = 0
         '
         'NuevoTipoMaquina
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(278, 169)
+        Me.ClientSize = New System.Drawing.Size(377, 205)
         Me.Controls.Add(Me.CancelarTipoButton)
         Me.Controls.Add(Me.AceptarTipoButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.AddTipoTextBox)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximumSize = New System.Drawing.Size(395, 252)
+        Me.MinimumSize = New System.Drawing.Size(395, 252)
         Me.Name = "NuevoTipoMaquina"
         Me.Text = "NuevoTipoMaquina"
         Me.ResumeLayout(False)

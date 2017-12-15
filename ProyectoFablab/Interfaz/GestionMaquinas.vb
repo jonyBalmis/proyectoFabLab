@@ -65,7 +65,7 @@ Public Class GestionMaquinas
                 consulta.CaracteristicasRichTextBox.ReadOnly = True
                 consulta.AnadirButton.Visible = False
                 consulta.ExaminarButton.Visible = False
-
+                consulta.Text = "Consulta"
 
                 Dim imgs As String() = Directory.GetFiles(My.Settings.MaquinasImg, DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(0).Value, Integer) & "*")
 
@@ -116,6 +116,7 @@ Public Class GestionMaquinas
                     consulta.ImagenesFlowLayoutPanel.Controls.Add(picturebox)
                 Next
                 consulta.AceptarButton.Text = "Guardar"
+                consulta.Text = "Editar"
                 consulta.Show()
 
             Else

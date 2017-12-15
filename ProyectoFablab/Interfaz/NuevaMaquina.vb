@@ -43,7 +43,8 @@ Public Class Form3
         Try
             If AceptarButton.Text.Equals("Aceptar") Then
                 Maquinas.Insertar(ModeloTextBox.Text, CDbl(PrecioTextBox.Text), CompraDateTimePicker.Value.Date, TelefonoTextBox.Text, NMComboBox.Text, DescripcionRichTextBox.Text, CaracteristicasRichTextBox.Text)
-                MessageBox.Show(ModeloTextBox.Text & " ha sido registrado.", "Maquina registrada", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ModeloTextBox.Text & " ha sido registrado con exito.", "Maquina registrada", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                VentanaPrincipal.ActualizarEstados()
             ElseIf AceptarButton.Text.Equals("Guardar") Then
                 Maquinas.Actualizar(id, ModeloTextBox.Text, CDbl(PrecioTextBox.Text), CompraDateTimePicker.Value.Date, TelefonoTextBox.Text, NMComboBox.Text, DescripcionRichTextBox.Text, CaracteristicasRichTextBox.Text)
                 MessageBox.Show(ModeloTextBox.Text & " actualizado con exito.", "Maquina registrada", MessageBoxButtons.OK, MessageBoxIcon.Information)
