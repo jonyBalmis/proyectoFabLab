@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub VentanaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        InfoUToolStripStatusLabel.Text = "Usuarios: 1"
+        InfoUToolStripStatusLabel.Text = "Usuarios: " & Usuario.ContarUsuarios()
     End Sub
 
     Private Sub AcercaDe_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click, AcercaDeToolStripMenuItem.Click

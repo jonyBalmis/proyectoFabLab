@@ -94,4 +94,10 @@
 
         Return False
     End Function
+
+    Public Function ContarUsuarios() As Integer
+        Dim total As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+
+        Return total.Contar()
+    End Function
 End Module
