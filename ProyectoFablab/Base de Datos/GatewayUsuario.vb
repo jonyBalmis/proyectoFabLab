@@ -84,7 +84,8 @@ Public Class GatewayUsuario
     Public Function Eliminar(id As Integer) As Integer
         Dim consulta As String
         Dim filasAfectadas As Integer
-        consulta = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
+        consulta = String.Format("DELETE FROM Usuarios LEFT JOIN Reservas ON Usuarios.id=Reservas.usuario WHERE id={0}", id)
+        'consulta = String.Format("DELETE FROM Usuarios WHERE id={0}", id)
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede estar vacío.")
         End If

@@ -54,39 +54,43 @@ Public Class GestionUsuarios
     Private Sub GUConsultarButton_Click(sender As Object, e As EventArgs) Handles GUConsultarButton.Click
         Dim consulta As NuevoUsuario = New NuevoUsuario()
         consulta.MdiParent = VentanaPrincipal
+        Try
+            If GUDataGridView.SelectedRows.Count = 1 Then
+                consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
+                consulta.NUNombreTextBox.ReadOnly = True
+                consulta.NUApellidosTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(2).Value)
+                consulta.NUApellidosTextBox.ReadOnly = True
+                consulta.NUFechaDateTimePicker.Value = DirectCast(GUDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
+                consulta.NUFechaDateTimePicker.Enabled = False
+                consulta.NUTelefonoTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(4).Value)
+                consulta.NUTelefonoTextBox.ReadOnly = True
+                consulta.NUEmailTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(5).Value)
+                consulta.NUEmailTextBox.ReadOnly = True
+                consulta.NUDireccionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(6).Value)
+                consulta.NUDireccionTextBox.ReadOnly = True
+                consulta.NUOrganizacionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(7).Value)
+                consulta.NUOrganizacionTextBox.ReadOnly = True
+                consulta.NUObservacionesRichTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(10).Value)
+                consulta.NUObservacionesRichTextBox.ReadOnly = True
+                consulta.NUTipoComboBox.Items.Add(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(12).Value))
+                consulta.NUTipoComboBox.SelectedIndex = 0
+                consulta.NUTipoComboBox.Enabled = False
+                consulta.NUTipoButton.Visible = False
+                consulta.NUExaminarButton.Visible = False
+                consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
+                consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+                consulta.NUAceptarButton.Visible = False
+                consulta.NUCancelarButton.Text = "Salir"
+                consulta.Show()
 
-        If GUDataGridView.SelectedRows.Count = 1 Then
-            consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
-            consulta.NUNombreTextBox.ReadOnly = True
-            consulta.NUApellidosTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(2).Value)
-            consulta.NUApellidosTextBox.ReadOnly = True
-            consulta.NUFechaDateTimePicker.Value = DirectCast(GUDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
-            consulta.NUFechaDateTimePicker.Enabled = False
-            consulta.NUTelefonoTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(4).Value)
-            consulta.NUTelefonoTextBox.ReadOnly = True
-            consulta.NUEmailTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(5).Value)
-            consulta.NUEmailTextBox.ReadOnly = True
-            consulta.NUDireccionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(6).Value)
-            consulta.NUDireccionTextBox.ReadOnly = True
-            consulta.NUOrganizacionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(7).Value)
-            consulta.NUOrganizacionTextBox.ReadOnly = True
-            consulta.NUObservacionesRichTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(10).Value)
-            consulta.NUObservacionesRichTextBox.ReadOnly = True
-            consulta.NUTipoComboBox.Items.Add(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(12).Value))
-            consulta.NUTipoComboBox.SelectedIndex = 0
-            consulta.NUTipoComboBox.Enabled = False
-            consulta.NUTipoButton.Visible = False
-            consulta.NUExaminarButton.Visible = False
-            consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
-            consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
-            consulta.NUAceptarButton.Visible = False
-            consulta.NUCancelarButton.Text = "Salir"
-            consulta.Show()
-
-        Else
-            MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
-
+            Else
+                MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Catch ex As ArgumentException
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     ''' <summary>
@@ -105,30 +109,35 @@ Public Class GestionUsuarios
     Private Sub GUEditarButton_Click(sender As Object, e As EventArgs) Handles GUEditarButton.Click
         Dim consulta As NuevoUsuario = New NuevoUsuario()
         consulta.MdiParent = VentanaPrincipal
+        Try
+            If GUDataGridView.SelectedRows.Count = 1 Then
+                consulta.id = DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer)
+                consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
+                consulta.NUApellidosTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(2).Value)
+                consulta.NUFechaDateTimePicker.Value = DirectCast(GUDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
+                consulta.NUTelefonoTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(4).Value)
+                consulta.NUEmailTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(5).Value)
+                consulta.NUDireccionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(6).Value)
+                consulta.NUOrganizacionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(7).Value)
+                consulta.NUObservacionesRichTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(10).Value)
+                consulta.ActualizarComboBox()
+                consulta.NUTipoComboBox.SelectedIndex = DirectCast(GUDataGridView.SelectedRows(0).Cells(11).Value, Integer) - 1
+                consulta.NUTipoComboBox.SelectedIndex = 0
+                consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
+                consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+                consulta.NUAceptarButton.Text = "Guardar"
+                consulta.Show()
 
-        If GUDataGridView.SelectedRows.Count = 1 Then
-            consulta.id = DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer)
-            consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
-            consulta.NUApellidosTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(2).Value)
-            consulta.NUFechaDateTimePicker.Value = DirectCast(GUDataGridView.SelectedRows(0).Cells(3).Value, DateTime)
-            consulta.NUTelefonoTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(4).Value)
-            consulta.NUEmailTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(5).Value)
-            consulta.NUDireccionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(6).Value)
-            consulta.NUOrganizacionTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(7).Value)
-            consulta.NUObservacionesRichTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(10).Value)
-            consulta.ActualizarComboBox()
-            consulta.NUTipoComboBox.SelectedIndex = DirectCast(GUDataGridView.SelectedRows(0).Cells(11).Value, Integer) - 1
-            consulta.NUTipoComboBox.SelectedIndex = 0
-            consulta.NUFotoPictureBox.Image = ObtenerImagen(String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(0).Value))
-            consulta.NUFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
-            consulta.NUAceptarButton.Text = "Guardar"
-            consulta.Show()
+                'ARREGLAR MODIFICACION DE IMAGEN
 
-            'ARREGLAR MODIFICACION DE IMAGEN
-
-        Else
-            MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
+            Else
+                MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Catch ex As ArgumentException
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub GestionUsuarios_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
@@ -136,11 +145,18 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub GUEliminarButton_Click(sender As Object, e As EventArgs) Handles GUEliminarButton.Click
-        If GUDataGridView.SelectedRows.Count = 1 Then
+        Try
+            If GUDataGridView.SelectedRows.Count = 1 Then
+                Usuario.EliminarUsuario(DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer))
+                MessageBox.Show("El usuario ha sido eliminado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Else
+                MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Catch ex As ArgumentException
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-
-        Else
-            MessageBox.Show("Selecciona una fila :). ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
     End Sub
 End Class

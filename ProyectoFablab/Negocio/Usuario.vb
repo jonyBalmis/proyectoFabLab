@@ -77,4 +77,21 @@
         End Try
         Return True
     End Function
+
+
+    Public Function EliminarUsuario(id As Integer) As Boolean
+        Dim eliminar As GatewayUsuario = New GatewayUsuario(My.Settings.Conexion)
+
+        Try
+            If eliminar.Eliminar(id) > 0 Then
+                Return True
+            End If
+        Catch ex As ArgumentException
+            Throw New ArgumentException(ex.Message, ex)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        End Try
+
+        Return False
+    End Function
 End Module
