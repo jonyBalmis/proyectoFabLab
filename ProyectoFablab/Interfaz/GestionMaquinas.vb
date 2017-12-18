@@ -40,13 +40,13 @@ Public Class GestionMaquinas
     Private Sub NuevaButton_Click(sender As Object, e As EventArgs) Handles NuevaButton.Click
         Dim nueva As New Form3()
 
-        nueva.MdiParent = VentanaPrincipal
+        nueva.MdiParent = VentanaPrincipal.ActiveForm
         nueva.Show()
     End Sub
 
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
         Dim consulta As New Form3()
-        consulta.MdiParent = VentanaPrincipal
+        consulta.MdiParent = VentanaPrincipal.ActiveForm
         Try
             If GMTablaDataGridView.SelectedRows.Count = 1 Then
                 consulta.ModeloTextBox.Text = String.Format("{0}", GMTablaDataGridView.SelectedRows(0).Cells(1).Value)
@@ -94,7 +94,7 @@ Public Class GestionMaquinas
 
     Private Sub EditarButton_Click(sender As Object, e As EventArgs) Handles EditarButton.Click
         Dim consulta As New Form3()
-        consulta.MdiParent = VentanaPrincipal
+        consulta.MdiParent = VentanaPrincipal.ActiveForm
         Try
             If GMTablaDataGridView.SelectedRows.Count = 1 Then
                 consulta.id = DirectCast(GMTablaDataGridView.SelectedRows(0).Cells(0).Value, Integer)

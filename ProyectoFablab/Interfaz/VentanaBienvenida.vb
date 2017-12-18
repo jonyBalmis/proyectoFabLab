@@ -18,4 +18,5 @@
         aplicacion = New VentanaPrincipal()
         estrellas = {EstrellaPictureBox1, EstrellaPictureBox2, EstrellaPictureBox3, EstrellaPictureBox4, EstrellaPictureBox5}
     End Sub
+
 End Class

@@ -37,6 +37,7 @@ Public Class GestionUsuarios
 
     End Sub
 
+    'Actualiza este formulario
     Public Property Actualizar() As Boolean
         Get
             Return _actualizar
@@ -47,6 +48,7 @@ Public Class GestionUsuarios
             End If
         End Set
     End Property
+
     Private Sub GUBuscarTextBox_TextChanged(sender As Object, e As EventArgs) Handles GUBuscarTextBox.TextChanged
 
         Enlace.Filter = "nombre LIKE '" & GUBuscarTextBox.Text & "%'"
@@ -55,14 +57,15 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub GUNuevoButton_Click(sender As Object, e As EventArgs) Handles GUNuevoButton.Click
+
         Dim nuevo As NuevoUsuario = New NuevoUsuario()
-        nuevo.MdiParent = VentanaPrincipal
+        nuevo.MdiParent = VentanaPrincipal.ActiveForm
         nuevo.Show()
     End Sub
 
     Private Sub GUConsultarButton_Click(sender As Object, e As EventArgs) Handles GUConsultarButton.Click
         Dim consulta As NuevoUsuario = New NuevoUsuario()
-        consulta.MdiParent = VentanaPrincipal
+        consulta.MdiParent = VentanaPrincipal.ActiveForm
         Try
             If GUDataGridView.SelectedRows.Count = 1 Then
                 consulta.NUNombreTextBox.Text = String.Format("{0}", GUDataGridView.SelectedRows(0).Cells(1).Value)
@@ -117,7 +120,7 @@ Public Class GestionUsuarios
 
     Private Sub GUEditarButton_Click(sender As Object, e As EventArgs) Handles GUEditarButton.Click
         Dim consulta As NuevoUsuario = New NuevoUsuario()
-        consulta.MdiParent = VentanaPrincipal
+        consulta.MdiParent = VentanaPrincipal.ActiveForm
         Try
             If GUDataGridView.SelectedRows.Count = 1 Then
                 consulta.id = DirectCast(GUDataGridView.SelectedRows(0).Cells(0).Value, Integer)
